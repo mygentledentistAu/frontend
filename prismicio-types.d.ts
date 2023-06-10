@@ -188,7 +188,8 @@ type PageDocumentDataSlicesSlice =
   | TextSlice
   | ContactFormSlice
   | BookAppointmentSlice
-  | TreatmentListSlice;
+  | TreatmentListSlice
+  | HeroHomeSlice;
 /**
  * Page document from Prismic
  *
@@ -583,6 +584,122 @@ type HeroSliceVariation = HeroSliceDefault;
  *
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+/**
+ * Primary content in HeroHome → Primary
+ *
+ */
+interface HeroHomeSliceDefaultPrimary {
+  /**
+   * Title field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.RichTextField;
+  /**
+   * Short Text field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.short_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  short_text: prismic.KeyTextField;
+  /**
+   * Button Link field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
+  /**
+   * Button Label field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_label: prismic.KeyTextField;
+  /**
+   * Icon Link field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.icon_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  icon_link: prismic.LinkField;
+  /**
+   * Icon Image field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.icon_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon_image: prismic.ImageField<never>;
+  /**
+   * Icon Text field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.icon_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  icon_text: prismic.KeyTextField;
+  /**
+   * Image field in *HeroHome → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_home.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Default variation for HeroHome Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroHomeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroHomeSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *HeroHome*
+ *
+ */
+type HeroHomeSliceVariation = HeroHomeSliceDefault;
+/**
+ * HeroHome Shared Slice
+ *
+ * - **API ID**: `hero_home`
+ * - **Description**: `HeroHome`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroHomeSlice = prismic.SharedSlice<
+  "hero_home",
+  HeroHomeSliceVariation
+>;
 /**
  * Primary content in Image → Primary
  *
@@ -1092,6 +1209,10 @@ declare module "@prismicio/client" {
       HeroSliceDefault,
       HeroSliceVariation,
       HeroSlice,
+      HeroHomeSliceDefaultPrimary,
+      HeroHomeSliceDefault,
+      HeroHomeSliceVariation,
+      HeroHomeSlice,
       ImageSliceDefaultPrimary,
       ImageSliceDefault,
       ImageSliceWidePrimary,

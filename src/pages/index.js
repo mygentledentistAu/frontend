@@ -33,7 +33,7 @@ export default function Index({
         context={{ treatments: treatments }}
       />
 
-      <Bounded size="widest">
+      {/* <Bounded size="widest">
         <h2>Articles List</h2>
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (
@@ -55,7 +55,7 @@ export default function Index({
             </li>
           ))}
         </ul>
-      </Bounded>
+      </Bounded> */}
     </Layout>
   );
 }

@@ -1,0 +1,68 @@
+{
+  "id": "hero_home",
+  "type": "SharedSlice",
+  "name": "HeroHome",
+  "description": "HeroHome",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading1,em"
+          }
+        },
+        "short_text": {
+          "type": "Text",
+          "config": { "label": "Short Text", "placeholder": "" }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": { "label": "Button Label", "placeholder": "" }
+        },
+        "icon_link": {
+          "type": "Link",
+          "config": { "label": "Icon Link", "placeholder": "", "select": null }
+        },
+        "icon_image": {
+          "type": "Image",
+          "config": {
+            "label": "Icon Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "icon_text": {
+          "type": "Text",
+          "config": { "label": "Icon Text", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": { "width": 550, "height": 568 },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

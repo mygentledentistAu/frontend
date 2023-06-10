@@ -6,6 +6,7 @@ export const components = {
   book_appointment: dynamic(() => import("./BookAppointment")),
   contact_form: dynamic(() => import("./ContactForm")),
   hero: dynamic(() => import("./Hero")),
+  hero_home: dynamic(() => import("./HeroHome")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
   quote: dynamic(() => import("./Quote")),
