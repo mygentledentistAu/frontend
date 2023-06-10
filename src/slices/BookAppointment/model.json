@@ -1,0 +1,45 @@
+{
+  "id": "book_appointment",
+  "type": "SharedSlice",
+  "name": "BookAppointment",
+  "description": "BookAppointment",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": { "label": "Button Label", "placeholder": "" }
+        }
+      },
+      "items": {
+        "days": {
+          "type": "Text",
+          "config": { "label": "Days", "placeholder": "" }
+        },
+        "hours": {
+          "type": "Text",
+          "config": { "label": "Hours", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Book your appointment."
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"button_label": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Book Now"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"days",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Mon to Thu"
+						}
+					],
+					[
+						"hours",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "8am - 8pm"
+						}
+					]
+				]
+			}
+		]
+	}
+]

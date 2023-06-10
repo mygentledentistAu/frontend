@@ -1,0 +1,210 @@
+@import "./reset.css";
+
+:root {
+
+    --grid-width: 900px;
+    --color-primary: #005498;
+    --color-secondary: #0C93BE;
+    --color-accent-1: #CAFCFF;
+    --color-accent-2: #FDCD3B;
+    --color-light: #ffffff;
+    --color-light-1: #f2f2f2;
+
+
+    --radius-1: .25rem;
+    --radius-5: 2rem;
+
+    --spacing-1: .25rem;
+    --spacing-2: .5rem;
+    --spacing-3: 1rem;    
+    --spacing-4: 2rem;    
+    --spacing-5: 3rem;
+    --spacing-6: 4rem;
+    --spacing-7: 5rem;
+    --spacing-8: 6rem;
+}
+
+:root {
+    // 1.414 - Aug Forth
+    --font-size-1: 3.998rem; // 64
+    --font-size-2: 2.827rem; // 45
+    --font-size-3: 1.999rem; // 32
+    --font-size-4: 1.414rem; // 22.6
+    --font-size-5: 1.15rem;   // 18.4
+    --font-size-6: 1rem;     // 16
+    --font-size-7: 0.95rem;   // 
+    --font-size-8: 0.8rem;   // 
+
+    --font-weight-1: 800;
+    --font-weight-2: bold;
+    --font-weight-3: normal; 
+}
+
+html {
+    font-size: 16px;
+    // font-family: 'Bitter', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.4;
+}
+
+
+h1 {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+
+}
+
+img {
+    max-height: 10rem;
+    height: auto;
+    width: auto;
+}
+
+main {
+    overflow: hidden;
+}
+
+.grid-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--grid-width);
+
+}
+
+.button {
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-2);
+    color: var(--color-light-1);
+    background-color: var(--color-primary);
+    text-decoration: none;
+    text-align: center;
+    padding-inline: var(--spacing-4);
+    padding-block: var(--spacing-3);
+    border-radius: var(--radius-1);
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+
+.button--small {
+    font-size: var(--font-size-7);
+    padding-inline: var(--spacing-3);
+    padding-block: var(--spacing-2);
+}
+
+
+/* ------------------- Slices ------------------- */
+
+header {
+    height: var(--spacing-7);
+    border-bottom: 12px solid var(--color-primary);
+    background: var(--color-light);
+
+    .grid-wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+    }
+
+    .logo {
+        display: block;
+        background: url("/My-Gentle-Dentist.png") no-repeat;
+        background-size: cover;
+        text-indent: -9999px;
+        height: 4rem;
+        width: 14rem;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+
+        a {
+            white-space: nowrap;
+            list-style: none;
+            font-weight: var(--font-weight-2);
+            font-size: var(--font-size-7);
+            padding: var(--spacing-3);
+            margin-inline: var(--spacing-1);
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: var(--spacing-2);
+            }
+        }
+    }
+}
+
+.book-appointment {
+
+     margin-block: var(--spacing-5) ;
+    .grid-wrap {
+        color: var(--color-light-1);
+        background-color: var(--color-secondary);
+        border-radius: var(--radius-5);
+        padding: var(--spacing-5);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .group-1 {
+        max-width: 35ch;
+        min-height: 13rem;
+    }
+
+    .group-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    h2 {
+        color: var(--color-accent-1);
+    }
+
+    ul {
+        max-width: min-content;
+        padding-left: 1.2rem;
+        margin: 0;
+        margin-bottom: var(--spacing-4);
+    }
+
+    li {
+        white-space: nowrap;
+    }
+
+    b {
+        padding-left: 0.5rem;
+    }
+
+
+}
