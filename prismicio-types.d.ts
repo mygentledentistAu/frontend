@@ -187,7 +187,8 @@ type PageDocumentDataSlicesSlice =
   | QuoteSlice
   | TextSlice
   | ContactFormSlice
-  | BookAppointmentSlice;
+  | BookAppointmentSlice
+  | TreatmentListSlice;
 /**
  * Page document from Prismic
  *
@@ -300,6 +301,18 @@ interface TreatmentDocumentData {
     "Emergency Dental" | "General treatments" | "Cosmetic",
     "filled"
   >;
+  /**
+   * featured field in *Treatment*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: treatment.featured
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  featured: prismic.BooleanField;
   /**
    * Slice Zone field in *Treatment*
    *
@@ -967,6 +980,82 @@ export type TextWithImageSlice = prismic.SharedSlice<
   "text_with_image",
   TextWithImageSliceVariation
 >;
+/**
+ * Primary content in TreatmentList → Primary
+ *
+ */
+interface TreatmentListSliceDefaultPrimary {
+  /**
+   * Title field in *TreatmentList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment_list.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * Footer Text field in *TreatmentList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment_list.primary.footer_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  footer_text: prismic.KeyTextField;
+  /**
+   * Footer Link field in *TreatmentList → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment_list.primary.footer_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  footer_link: prismic.LinkField;
+  /**
+   * Footer Link Text field in *TreatmentList → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment_list.primary.footer_link_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  footer_link_text: prismic.KeyTextField;
+}
+/**
+ * Default variation for TreatmentList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TreatmentListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TreatmentListSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *TreatmentList*
+ *
+ */
+type TreatmentListSliceVariation = TreatmentListSliceDefault;
+/**
+ * TreatmentList Shared Slice
+ *
+ * - **API ID**: `treatment_list`
+ * - **Description**: `TreatmentList`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TreatmentListSlice = prismic.SharedSlice<
+  "treatment_list",
+  TreatmentListSliceVariation
+>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1028,6 +1117,10 @@ declare module "@prismicio/client" {
       TextWithImageSliceWithButton,
       TextWithImageSliceVariation,
       TextWithImageSlice,
+      TreatmentListSliceDefaultPrimary,
+      TreatmentListSliceDefault,
+      TreatmentListSliceVariation,
+      TreatmentListSlice,
     };
   }
 }

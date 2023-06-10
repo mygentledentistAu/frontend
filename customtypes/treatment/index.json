@@ -20,6 +20,15 @@
           "default_value": "Emergency Dental"
         }
       },
+      "featured": {
+        "type": "Boolean",
+        "config": {
+          "label": "featured",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": true
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

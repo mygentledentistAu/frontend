@@ -6,33 +6,37 @@
 
 import { PrismicNextLink } from "@prismicio/next";
 
+import styles from "./index.module.scss";
+
 const BookAppointment = ({ slice }) => {
   return (
     <section
-      className="book-appointment"
+      className={styles.bookAppointment}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
       <div className="grid-wrap">
-        <div className="group-1">
-          <h2>{slice.primary.title}</h2>
-        </div>
+        <div className={styles.inner}>
+          <div className={styles.group1}>
+            <h2>{slice.primary.title}</h2>
+          </div>
 
-        <div className="group-2">
-          <ul>
-            {slice.items.map((item) => (
-              <li key={item.days}>
-                {item.days} <b>{item.hours}</b>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.group2}>
+            <ul>
+              {slice.items.map((item) => (
+                <li key={item.days}>
+                  {item.days} <b>{item.hours}</b>
+                </li>
+              ))}
+            </ul>
 
-          <PrismicNextLink
-            field={slice.primary.button_link}
-            className="button button--primary"
-          >
-            {slice.primary.button_label}
-          </PrismicNextLink>
+            <PrismicNextLink
+              field={slice.primary.button_link}
+              className="button button--primary"
+            >
+              {slice.primary.button_label}
+            </PrismicNextLink>
+          </div>
         </div>
       </div>
     </section>

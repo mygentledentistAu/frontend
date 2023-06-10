@@ -1,0 +1,39 @@
+{
+  "id": "treatment_list",
+  "type": "SharedSlice",
+  "name": "TreatmentList",
+  "description": "TreatmentList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        },
+        "footer_text": {
+          "type": "Text",
+          "config": { "label": "Footer Text", "placeholder": "" }
+        },
+        "footer_link": {
+          "type": "Link",
+          "config": {
+            "label": "Footer Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "footer_link_text": {
+          "type": "Text",
+          "config": { "label": "Footer Link Text", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

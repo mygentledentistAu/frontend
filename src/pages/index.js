@@ -27,7 +27,11 @@ export default function Index({
         <title>{prismic.asText(settings.data.name)}</title>
       </Head>
 
-      <SliceZone slices={page.data.slices} components={components} />
+      <SliceZone
+        slices={page.data.slices}
+        components={components}
+        context={{ treatments: treatments }}
+      />
 
       <Bounded size="widest">
         <h2>Articles List</h2>
@@ -68,7 +72,6 @@ export async function getStaticProps({ previewData }) {
     ],
   });
   const treatments = await client.getAllByType("treatment");
-  console.log("treatments: ", treatments);
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 

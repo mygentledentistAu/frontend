@@ -28,7 +28,8 @@
             "quote": { "type": "SharedSlice" },
             "text": { "type": "SharedSlice" },
             "contact_form": { "type": "SharedSlice" },
-            "book_appointment": { "type": "SharedSlice" }
+            "book_appointment": { "type": "SharedSlice" },
+            "treatment_list": { "type": "SharedSlice" }
           }
         }
       }
