@@ -1,26 +1,3 @@
-# Prismic + Next.js Blog Starter
-
-This sample blog is an excellent starting point to explore [Next.js][nextjs] and [Prismic][prismic]. Get it up and running in minutes. Modify and adapt it to your liking; it's all yours!
-
-- **Demo**: [Open live demo][live-demo]
-- **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
-
-&nbsp;
-
-<img src="https://user-images.githubusercontent.com/8601064/163122284-5b80a81e-a4fd-482e-9bd5-99b22f61175f.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
-
-&nbsp;
-
-## 🚀 Quick Start
-
-To start a new project using this starter, run the following commands in your terminal:
-
-```sh
-npx degit prismicio-community/nextjs-starter-prismic-blog your-project-name
-cd your-project-name
-npx @slicemachine/init@latest
-```
-
 The commands will do the following:
 
 1. Start a new Next.js project using this starter.

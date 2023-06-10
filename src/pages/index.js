@@ -10,8 +10,13 @@ import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
 import { components } from "@/slices/";
 
-
-export default function Index({ page, articles, treatments, navigation, settings }) {
+export default function Index({
+  page,
+  articles,
+  treatments,
+  navigation,
+  settings,
+}) {
   return (
     <Layout
       withHeaderDivider={false}
@@ -22,9 +27,7 @@ export default function Index({ page, articles, treatments, navigation, settings
         <title>{prismic.asText(settings.data.name)}</title>
       </Head>
 
-
       <SliceZone slices={page.data.slices} components={components} />
-
 
       <Bounded size="widest">
         <h2>Articles List</h2>
@@ -34,16 +37,16 @@ export default function Index({ page, articles, treatments, navigation, settings
           ))}
         </ul>
       </Bounded>
-      <hr/>
+      <hr />
 
       <Bounded size="widest">
-      <h2>Treatment List</h2>
+        <h2>Treatment List</h2>
 
         <ul className="grid grid-cols-1 gap-16">
-          {treatments.map((treatment) => (
-            <li>
+          {treatments.map((treatment, i) => (
+            <li key={i}>
               <PrismicNextLink document={treatment}>
-              <>{treatment.data.title}</>
+                <>{treatment.data.title}</>
               </PrismicNextLink>
             </li>
           ))}
@@ -53,7 +56,7 @@ export default function Index({ page, articles, treatments, navigation, settings
   );
 }
 
-export async function getStaticProps({previewData }) {
+export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
   const page = await client.getByUID("page", "home");
