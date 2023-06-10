@@ -28,14 +28,14 @@ const TreatmentList = ({ slice, context = {} }) => {
         <h2>{slice.primary.title}</h2>
 
         <div className={styles.list}>
-          {categories.map((cat) => {
-            let treatments = mapped[cat];
+          {categories.map((c) => {
+            let treatments = mapped[c];
             return (
-              <article>
-                <h3>{cat}</h3>
+              <article key={c}>
+                <h3>{c}</h3>
                 <ul>
                   {treatments.map((t) => (
-                    <li>
+                    <li key={t.uid}>
                       <h4>
                         <PrismicNextLink href={t.url}>
                           {t.data.title}
