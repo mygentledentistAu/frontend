@@ -16,13 +16,10 @@ export default function Index({
   treatments,
   navigation,
   settings,
+  footer,
 }) {
   return (
-    <Layout
-      withHeaderDivider={false}
-      navigation={navigation}
-      settings={settings}
-    >
+    <Layout navigation={navigation} settings={settings} footer={footer}>
       <Head>
         <title>{prismic.asText(settings.data.name)}</title>
       </Head>
@@ -74,6 +71,7 @@ export async function getStaticProps({ previewData }) {
   const treatments = await client.getAllByType("treatment");
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
+  const footer = await client.getSingle("footer");
 
   return {
     props: {
@@ -82,6 +80,7 @@ export async function getStaticProps({ previewData }) {
       treatments,
       navigation,
       settings,
+      footer,
     },
   };
 }

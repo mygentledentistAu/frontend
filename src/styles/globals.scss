@@ -3,10 +3,14 @@
 :root {
   --grid-width: 1100px;
   --color-primary: hsl(207, 100%, 30%);
-  --color-primary-dark: hsl(207, 100%, 25%);
+  --color-primary-1: hsl(207, 100%, 25%);
+  --color-primary-2: hsl(207, 70%, 20%);
+  --color-primary-3: hsl(207, 70%, 15%);
+  --color-primary-trans1: hsla(207, 70%, 15%, 70%);
+  --color-primary-trans2: hsla(207, 70%, 15%, 50%);
 
   --color-secondary: hsl(194, 88%, 40%);
-  --color-secondary-1: hsla(195, 30%, 35%, 8%);
+  --color-secondary-1: hsla(194, 30%, 35%, 8%);
 
   --color-accent-1: hsl(183, 100%, 90%);
   --color-accent-2: hsl(45, 98%, 61%);
@@ -14,7 +18,7 @@
   --color-light-1: hsl(0, 0%, 95%);
 
   --color-light-trans: hsla(0, 0%, 100%, 10%);
-  --color-dark-trans: hsla(0, 0%, 0%, 50%);
+  --color-dark-trans: hsla(207, 50%, 25%, 50%);
 
   --radius-1: 0.25rem;
   --radius-4: 1.5rem;
@@ -64,6 +68,7 @@
 html {
   font-size: 15px;
   font-family: var(--family-sans);
+  color: var(--color-primary-3);
   line-height: 1.4;
 }
 
@@ -146,7 +151,7 @@ main {
   transition: background-color 200ms ease-in;
 
   &:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-2);
   }
 }
 
@@ -403,5 +408,107 @@ header {
     //       margin-inline: var(--spacing-1);
     //     }
     //   }
+  }
+}
+
+footer {
+  container-type: inline-size;
+  --bg: hsla(216, 42%, 93%, 1);
+  background: var(--bg);
+  border-bottom: 1rem solid var(--color-primary);
+  overflow: hidden;
+
+  .bg {
+    margin-block: var(--spacing-4);
+  }
+
+  .box-1,
+  address,
+  article {
+    background: var(--bg);
+    padding-block: var(--spacing-3);
+  }
+
+  .box-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary-trans2);
+
+    .logo {
+      display: block;
+      background: url(/My-Gentle-Dentist.png) no-repeat center;
+      mix-blend-mode: darken;
+      background-size: contain;
+      text-indent: -9999px;
+      height: 5rem;
+      width: 100%;
+      margin-bottom: var(--spacing-1);
+    }
+  }
+
+  address {
+    font-style: normal;
+    border-bottom: 1px solid var(--color-primary-trans2);
+
+    strong {
+      font-size: var(--font-size-6);
+      font-weight: var(--font-weight-black);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: var(--spacing-3);
+    }
+  }
+
+  ul {
+    padding-left: 1.25rem;
+
+    a {
+      display: inline-block;
+      padding-block: var(--spacing-1);
+      color: var(--color-primary-1);
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding-block: var(--spacing-3);
+    color: var(--color-primary-trans);
+    font-size: var(--font-size-8);
+  }
+
+  @container (min-width: 864px) {
+    .bg {
+      margin-block: var(--spacing-6);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        hsla(216, 46%, 71%, 40%) 58.85%,
+        hsla(216, 46%, 71%, 0) 100%
+      );
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+    }
+
+    .box-1,
+    address,
+    article {
+      background: var(--bg);
+      padding: var(--spacing-4);
+      min-height: 10rem;
+      border: none;
+    }
+
+    .box-1 {
+      align-items: flex-start;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
   }
 }

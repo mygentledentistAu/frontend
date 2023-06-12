@@ -1,81 +1,60 @@
 import Link from "next/link";
 import { PrismicText } from "@prismicio/react";
 import * as prismic from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
 
-import { Bounded } from "./Bounded";
-import { Heading } from "./Heading";
-import { HorizontalDivider } from "./HorizontalDivider";
 import { PrismicRichText } from "./PrismicRichText";
 
-function SignUpForm({ settings }) {
-  return (
-    <div className="px-4">
-      <form
-        action="/api/sign-up"
-        method="post"
-        className="grid w-full max-w-xl grid-cols-1 gap-6"
-      >
-        {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
-          <div className="text-center font-serif tracking-tight text-slate-500">
-            <PrismicRichText
-              field={settings.data.newsletterDescription}
-              components={{
-                heading1: ({ children }) => (
-                  <Heading as="h2" className="mb-4 last:mb-0">
-                    {children}
-                  </Heading>
-                ),
-                paragraph: ({ children }) => (
-                  <p className="mb-4 italic last:mb-0">{children}</p>
-                ),
-              }}
-            />
-          </div>
-        )}
-        <div className="grid grid-cols-1 gap-2">
-          <div className="relative">
-            <label>
-              <span className="sr-only">Email address</span>
-              <input
-                name="email"
-                type="email"
-                placeholder="jane.doe@example.com"
-                required={true}
-                className="w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-10 text-slate-800 placeholder-slate-400"
-              />
-            </label>
-            <button
-              type="submit"
-              className="absolute bottom-0 right-0 top-0 flex items-center justify-center px-3 text-2xl text-slate-400"
-            >
-              <span className="sr-only">Submit</span>
-              <span aria-hidden={true}>&rarr;</span>
-            </button>
-          </div>
-          {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
-            <p className="text-center text-xs tracking-tight text-slate-500">
-              <PrismicText field={settings.data.newsletterDisclaimer} />
-            </p>
-          )}
-        </div>
-      </form>
-    </div>
-  );
-}
+export function Footer({ footer, settings }) {
+  function renderAddress(i = 1) {
+    const l = settings?.data?.locations?.[i - 1] || {};
+    return (
+      <address className={`box-${i + 1}`}>
+        <PrismicRichText field={l.address} />
+        <PrismicNextLink url={`tel:${l.phone}`}>{l.phone}</PrismicNextLink>
+      </address>
+    );
+  }
 
-export function Footer({ withSignUpForm = true, settings }) {
+  function renderLinks(i = 1) {
+    const links = footer?.data?.[`link_group_${i}`] || [];
+    return (
+      <article className={`links-${i}`}>
+        <ul>
+          {links.map((l) => (
+            <li key={l.link_text}>
+              <PrismicNextLink field={l.link}>{l.link_text}</PrismicNextLink>
+            </li>
+          ))}
+        </ul>
+      </article>
+    );
+  }
+
+  const email = settings?.data?.email;
+
   return (
-    <Bounded as="footer">
-      <div className="grid grid-cols-1 justify-items-center gap-24">
-        <HorizontalDivider />
-        {withSignUpForm && <SignUpForm settings={settings} />}
-        <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
-          Proudly published using{" "}
-          <Link href="https://prismic.io" className="text-slate-700">
-            Prismic
-          </Link>
+    <footer>
+      <div className="grid-wrap">
+        <div className="bg">
+          <div className="box-1">
+            <a href="/" className="logo">
+              Home Page
+            </a>
+            {email ? (
+              <PrismicNextLink url={`mailto:${email}`}>{email}</PrismicNextLink>
+            ) : null}
+          </div>
+          {renderAddress(1)}
+          {renderAddress(2)}
+
+          {renderLinks(1)}
+          {renderLinks(2)}
+          {renderLinks(3)}
         </div>
+
+        <div className="copyright">{footer?.data?.copyright}</div>
       </div>
-    </Bounded>
+    </footer>
   );
 }

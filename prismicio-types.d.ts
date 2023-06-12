@@ -76,6 +76,146 @@ export type ArticleDocument<Lang extends string = string> =
     "article",
     Lang
   >;
+/** Content for Footer documents */
+interface FooterDocumentData {
+  /**
+   * Copyright field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  copyright: prismic.KeyTextField;
+  /**
+   * Link Group 1 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  link_group_1: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup1Item>>;
+  /**
+   * Link Group 2 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  link_group_2: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup2Item>>;
+  /**
+   * Link Group 3 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  link_group_3: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup3Item>>;
+}
+/**
+ * Item in Footer → Link Group 1
+ *
+ */
+export interface FooterDocumentDataLinkGroup1Item {
+  /**
+   * Link field in *Footer → Link Group 1*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.LinkField;
+  /**
+   * Link Text field in *Footer → Link Group 1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_text: prismic.KeyTextField;
+}
+/**
+ * Item in Footer → Link Group 2
+ *
+ */
+export interface FooterDocumentDataLinkGroup2Item {
+  /**
+   * Link field in *Footer → Link Group 2*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.LinkField;
+  /**
+   * Link Text field in *Footer → Link Group 2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2[].link_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_text: prismic.KeyTextField;
+}
+/**
+ * Item in Footer → Link Group 3
+ *
+ */
+export interface FooterDocumentDataLinkGroup3Item {
+  /**
+   * Link field in *Footer → Link Group 3*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.LinkField;
+  /**
+   * Link Text field in *Footer → Link Group 3*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3[].link_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_text: prismic.KeyTextField;
+}
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
   /**
@@ -237,27 +377,73 @@ interface SettingsDocumentData {
    */
   profilePicture: prismic.ImageField<never>;
   /**
-   * Newsletter Description field in *Settings*
+   * Email field in *Settings*
    *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Text above the sign up form
-   * - **API ID Path**: settings.newsletterDescription
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.email
+   * - **Tab**: Locations
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  newsletterDescription: prismic.RichTextField;
+  email: prismic.KeyTextField;
   /**
-   * Newsletter Disclaimer field in *Settings*
+   * Location field in *Settings*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.locations[]
+   * - **Tab**: Locations
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>>;
+}
+/**
+ * Item in Settings → Location
+ *
+ */
+export interface SettingsDocumentDataLocationsItem {
+  /**
+   * address field in *Settings → Location*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: Small text below sign up form
-   * - **API ID Path**: settings.newsletterDisclaimer
-   * - **Tab**: Main
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.locations[].address
    * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  newsletterDisclaimer: prismic.RichTextField;
+  address: prismic.RichTextField;
+  /**
+   * Phone field in *Settings → Location*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.locations[].phone
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone: prismic.KeyTextField;
+  /**
+   * Booking Link field in *Settings → Location*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.locations[].booking_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  booking_link: prismic.LinkField;
+  /**
+   * Booking Label field in *Settings → Location*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.locations[].booking_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  booking_label: prismic.KeyTextField;
 }
 /**
  * Settings document from Prismic
@@ -385,6 +571,7 @@ export type TreatmentDocument<Lang extends string = string> =
   >;
 export type AllDocumentTypes =
   | ArticleDocument
+  | FooterDocument
   | NavigationDocument
   | PageDocument
   | SettingsDocument
@@ -1185,6 +1372,11 @@ declare module "@prismicio/client" {
       ArticleDocumentData,
       ArticleDocumentDataSlicesSlice,
       ArticleDocument,
+      FooterDocumentData,
+      FooterDocumentDataLinkGroup1Item,
+      FooterDocumentDataLinkGroup2Item,
+      FooterDocumentDataLinkGroup3Item,
+      FooterDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
       NavigationDocument,
@@ -1192,6 +1384,7 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       PageDocument,
       SettingsDocumentData,
+      SettingsDocumentDataLocationsItem,
       SettingsDocument,
       TreatmentDocumentData,
       TreatmentDocumentDataSlicesSlice,

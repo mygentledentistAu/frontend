@@ -31,23 +31,45 @@
           "constraint": { "width": 2000, "height": 2000 },
           "thumbnails": []
         }
+      }
+    },
+    "Locations": {
+      "email": {
+        "type": "Text",
+        "config": { "label": "Email", "placeholder": "" }
       },
-      "newsletterDescription": {
-        "type": "StructuredText",
+      "locations": {
+        "type": "Group",
         "config": {
-          "label": "Newsletter Description",
-          "placeholder": "Text above the sign up form",
-          "allowTargetBlank": true,
-          "multi": "heading1,paragraph,strong,em,hyperlink,list-item,o-list-item"
-        }
-      },
-      "newsletterDisclaimer": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Newsletter Disclaimer",
-          "placeholder": "Small text below sign up form",
-          "allowTargetBlank": true,
-          "multi": "paragraph,em,strong,hyperlink"
+          "label": "Location",
+          "fields": {
+            "address": {
+              "type": "StructuredText",
+              "config": {
+                "label": "address",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "strong,paragraph"
+              }
+            },
+            "phone": {
+              "type": "Text",
+              "config": { "label": "Phone", "placeholder": "" }
+            },
+            "booking_link": {
+              "type": "Link",
+              "config": {
+                "label": "Booking Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            },
+            "booking_label": {
+              "type": "Text",
+              "config": { "label": "Booking Label", "placeholder": "" }
+            }
+          }
         }
       }
     }
