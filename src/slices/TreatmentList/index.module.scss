@@ -48,7 +48,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 2.5rem;
-      padding: 0 0 0 1.25rem;
+      padding: 0 0 0 1rem;
     }
 
     li {
@@ -56,6 +56,7 @@
 
       &::marker {
         color: var(--color-dark-trans);
+        font-size: 0.6rem;
       }
     }
   }
