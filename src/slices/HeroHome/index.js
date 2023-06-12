@@ -15,33 +15,39 @@ const HeroHome = ({ slice }) => {
       data-slice-variation={slice.variation}
       className={styles.heroHome}
     >
-      <div className="grid-wrap">
-        <div className={styles.inner}>
-          <article>
+      <div className={styles.gridWrap}>
+        <article className={styles.topSection}>
+          <div className={styles.headline}>
             <PrismicRichText field={slice.primary.title} />
-            <div className={styles.group1}>
-              <h2>{slice.primary.short_text}</h2>
-
-              <div className={styles.ctaList}>
-                <PrismicNextLink
-                  field={slice.primary.button_link}
-                  className="button button--primary"
-                >
-                  {slice.primary.button_label}
-                </PrismicNextLink>
-
-                <PrismicNextLink field={slice.primary.icon_link}>
-                  <PrismicNextImage field={slice.primary.icon_image} />
-                </PrismicNextLink>
-              </div>
-            </div>
-          </article>
-
-          <article>
+          </div>
+          <div className={styles.image}>
             <PrismicNextImage field={slice.primary.image} />
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
+
+      <div className="grid-wrap">
+        <article className={styles.bottomSection}>
+          <div className={styles.group1}>
+            <h2>{slice.primary.short_text}</h2>
+
+            <div className={styles.ctaList}>
+              <PrismicNextLink field={slice.primary.icon_link}>
+                <PrismicNextImage field={slice.primary.icon_image} />
+              </PrismicNextLink>
+
+              <PrismicNextLink
+                field={slice.primary.button_link}
+                className="button button--primary"
+              >
+                {slice.primary.button_label}
+              </PrismicNextLink>
+            </div>
+          </div>
+          <div className="empty"></div>
+        </article>
+      </div>
+      {/* </div> */}
     </section>
   );
 };
