@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { PrismicText } from "@prismicio/react";
-import * as prismic from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
-
 import { PrismicRichText } from "./PrismicRichText";
 
 export function Footer({ footer, settings }) {
@@ -38,9 +35,9 @@ export function Footer({ footer, settings }) {
       <div className="grid-wrap">
         <div className="bg">
           <div className="box-1">
-            <a href="/" className="logo">
+            <Link href="/" className="logo">
               Home Page
-            </a>
+            </Link>
             {email ? (
               <PrismicNextLink url={`mailto:${email}`}>{email}</PrismicNextLink>
             ) : null}
