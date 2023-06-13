@@ -4,8 +4,8 @@
   --grid-width: 1100px;
   --color-primary: hsl(207, 100%, 30%);
   --color-primary-1: hsl(207, 100%, 25%);
-  --color-primary-2: hsl(207, 70%, 20%);
-  --color-primary-3: hsl(207, 70%, 15%);
+  --color-primary-2: hsl(207, 70%, 30%);
+  --color-primary-3: hsl(207, 70%, 20%);
   --color-primary-trans1: hsla(207, 70%, 15%, 70%);
   --color-primary-trans2: hsla(207, 70%, 15%, 50%);
 
@@ -69,7 +69,7 @@ html {
   font-size: 15px;
   font-family: var(--family-sans);
   color: var(--color-primary-3);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 @media (min-width: 1280px) {
@@ -106,6 +106,28 @@ a {
   &:hover {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
+  }
+}
+
+.richtext {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-primary-2);
+    font-family: var(--family-sans);
+    font-weight: var(--font-weight-black);
+    margin-top: 0.15em;
+    margin-bottom: 0.4em;
+  }
+
+  p {
+    margin-bottom: 1.7em;
+  }
+
+  p ~ p {
+    margin-top: 1.5em;
   }
 }
 
@@ -148,6 +170,7 @@ main {
   white-space: nowrap;
   text-decoration: none !important;
   max-width: 640px;
+  display: inline-block;
   transition: background-color 200ms ease-in;
 
   &:hover {
@@ -342,6 +365,7 @@ header {
   li {
     margin: 0;
     padding: 0;
+    display: flex;
 
     a {
       display: inline-block;
@@ -377,9 +401,6 @@ header {
     }
 
     li {
-      a {
-        display: inline;
-      }
     }
 
     //     .menu--closed {
@@ -438,7 +459,7 @@ footer {
 
     .logo {
       display: block;
-      background: url(/My-Gentle-Dentist.png) no-repeat center;
+      background: url("/My-Gentle-Dentist.png") no-repeat;
       mix-blend-mode: darken;
       background-size: contain;
       text-indent: -9999px;
@@ -506,9 +527,102 @@ footer {
       align-items: flex-start;
     }
 
+    .logo {
+      background-position: left;
+    }
+
     ul {
       list-style: none;
       padding: 0;
     }
   }
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  color: var(--color-light);
+  background: var(--color-secondary);
+
+  .inner {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 20rem;
+  }
+
+  h3 {
+    font-family: var(--family-serif);
+    font-style: italic;
+    font-size: var(--font-size-5);
+    color: var(--color-primary);
+  }
+
+  h1 {
+    margin-bottom: var(--spacing-3);
+  }
+
+  h2 {
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.4;
+  }
+
+  img {
+    max-height: 30rem;
+    width: auto;
+  }
+}
+
+.hero-treatment {
+  .grid-wrap {
+    background: url("/tools.svg") no-repeat 98% center;
+  }
+
+  .inner {
+    padding-right: 20rem;
+  }
+}
+
+.text-image {
+  container-type: inline-size;
+  margin-block: var(--spacing-4);
+
+  .text {
+    max-width: 70ch;
+  }
+
+  .image {
+    margin-top: var(--spacing-4);
+    overflow: hidden;
+    border-bottom-right-radius: 6rem;
+  }
+
+  @container (min-width: 1100px) {
+    .inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-4);
+    }
+
+    &.text-image--left {
+      .image {
+        order: 1;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 6rem;
+      }
+      .text {
+        order: 2;
+      }
+    }
+
+    .image {
+      margin-top: 0;
+    }
+  }
+}
+
+.slice-text {
+  margin-block: var(--spacing-5);
 }

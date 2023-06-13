@@ -1,31 +1,37 @@
 import * as prismic from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 
-import { Bounded } from "@/components/Bounded";
 import { PrismicRichText } from "@/components/PrismicRichText";
 
 const TextWithImage = ({ slice }) => {
-  const image = slice.primary.image;
+  const data = slice.primary;
+  const image = data.image;
+  const alignClass = data.image_align === "left" ? "text-image--left" : "";
 
   return (
-    <Bounded as="section" className="bg-white">
-      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-        <div>
-          <PrismicRichText field={slice.primary.text} />
-        </div>
-        <div>
-          {prismic.isFilled.image(image) && (
-            <div className="bg-gray-100">
-              <PrismicNextImage
-                field={image}
-                sizes="100vw"
-                className="w-full"
-              />
-            </div>
-          )}
+    <section className={`text-image ${alignClass}`}>
+      <div className="grid-wrap">
+        <div className="inner">
+          <div className="text">
+            <PrismicRichText field={data.text} />
+
+            {data.button_label ? (
+              <PrismicNextLink
+                field={data.button_link}
+                className="button button--secondary"
+              >
+                {data.button_label}
+              </PrismicNextLink>
+            ) : null}
+          </div>
+          <div className="image">
+            {prismic.isFilled.image(image) && (
+              <PrismicNextImage field={image} sizes="100vw" />
+            )}
+          </div>
         </div>
       </div>
-    </Bounded>
+    </section>
   );
 };
 

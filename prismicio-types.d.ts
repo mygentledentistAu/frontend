@@ -474,6 +474,17 @@ interface TreatmentDocumentData {
    */
   title: prismic.KeyTextField;
   /**
+   * Summary field in *Treatment*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment.summary
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  summary: prismic.KeyTextField;
+  /**
    * Category field in *Treatment*
    *
    * - **Field Type**: Select
@@ -489,7 +500,7 @@ interface TreatmentDocumentData {
     "filled"
   >;
   /**
-   * featured field in *Treatment*
+   * Featured field in *Treatment*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
@@ -500,6 +511,17 @@ interface TreatmentDocumentData {
    *
    */
   featured: prismic.BooleanField;
+  /**
+   * image field in *Treatment*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treatment.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
   /**
    * Slice Zone field in *Treatment*
    *
@@ -1192,6 +1214,37 @@ interface TextWithImageSliceDefaultPrimary {
    *
    */
   image: prismic.ImageField<never>;
+  /**
+   * Image Align field in *TextWithImage → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: right
+   * - **API ID Path**: text_with_image.primary.image_align
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  image_align: prismic.SelectField<"right" | "left", "filled">;
+  /**
+   * Button Label (Optional) field in *TextWithImage → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_label: prismic.KeyTextField;
+  /**
+   * Button Link field in *TextWithImage → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_image.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
 }
 /**
  * Default variation for TextWithImage Slice

@@ -17,18 +17,36 @@
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+            "multi": "paragraph,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
           }
         },
         "image": {
           "type": "Image",
           "config": {
             "label": "Image",
-            "constraint": {
-              "width": 1000,
-              "height": 1200
-            },
+            "constraint": { "width": 900, "height": 600 },
             "thumbnails": []
+          }
+        },
+        "image_align": {
+          "type": "Select",
+          "config": {
+            "label": "Image Align",
+            "placeholder": "",
+            "options": ["right", "left"],
+            "default_value": "right"
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": { "label": "Button Label (Optional)", "placeholder": "" }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
           }
         }
       },
@@ -61,18 +79,11 @@
         },
         "buttonText": {
           "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
+          "config": { "label": "Button Text", "placeholder": "" }
         },
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
         }
       },
       "items": {},

@@ -11,6 +11,10 @@
         "type": "Text",
         "config": { "label": "Title", "placeholder": "" }
       },
+      "summary": {
+        "type": "Text",
+        "config": { "label": "Summary", "placeholder": "" }
+      },
       "category": {
         "type": "Select",
         "config": {
@@ -23,10 +27,18 @@
       "featured": {
         "type": "Boolean",
         "config": {
-          "label": "featured",
+          "label": "Featured",
           "placeholder_false": "false",
           "placeholder_true": "true",
           "default_value": true
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": { "width": 1100, "height": 1140 },
+          "thumbnails": []
         }
       },
       "slices": {

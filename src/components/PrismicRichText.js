@@ -8,7 +8,7 @@ const defaultComponents = {
   heading1: ({ children }) => <Heading as="h1">{children}</Heading>,
   heading2: ({ children }) => <Heading as="h2">{children}</Heading>,
   heading3: ({ children }) => <Heading as="h3">{children}</Heading>,
-  paragraph: ({ children }) => <p>{children}</p>,
+  paragraph: ({ children, key }) => <p>{children}</p>,
   oList: ({ children }) => <ol>{children}</ol>,
   oListItem: ({ children }) => <li>{children}</li>,
   list: ({ children }) => <ul>{children}</ul>,
@@ -26,9 +26,11 @@ const defaultComponents = {
 
 export function PrismicRichText({ components, ...props }) {
   return (
-    <BasePrismicRichText
-      components={{ ...defaultComponents, ...components }}
-      {...props}
-    />
+    <div className="richtext">
+      <BasePrismicRichText
+        components={{ ...defaultComponents, ...components }}
+        {...props}
+      />
+    </div>
   );
 }
