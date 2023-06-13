@@ -12,7 +12,7 @@ export default function Treatment({ treatment, navigation, settings, footer }) {
 
   function renderHead() {
     const title = treatment?.data?.meta_title;
-    const description = treatment?.data?.meta_description?.[0].text;
+    const description = treatment?.data?.meta_description?.[0]?.text;
     return (
       <>
         {title ? <title>{title}</title> : null}
