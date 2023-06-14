@@ -1,19 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: "/articles",
-        destination: "/",
-      },
-      {
-        source: "/treatments",
-        destination: "/",
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/articles",
+  //       destination: "/",
+  //     },
+  //     {
+  //       source: "/treatments",
+  //       destination: "/",
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;

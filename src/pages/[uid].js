@@ -6,16 +6,20 @@ import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import { Layout } from "@/components/Layout";
 
-export default function Page({ page, navigation, settings }) {
+export default function Page({ page, navigation, settings, footer }) {
   return (
-    <Layout navigation={navigation} settings={settings}>
+    <Layout navigation={navigation} settings={settings} footer={footer}>
       <Head>
         <title>
           {prismic.asText(page.data.title)} |{" "}
           {prismic.asText(settings.data.name)}
         </title>
       </Head>
-      <h1>[UID] Page</h1>
+      <section>
+        <div className="grid-wrap">
+          <h1>{prismic.asText(page.data.title)}</h1>
+        </div>
+      </section>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
@@ -27,12 +31,14 @@ export async function getStaticProps({ params, previewData }) {
   const page = await client.getByUID("page", params.uid);
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
+  const footer = await client.getSingle("footer");
 
   return {
     props: {
       page,
       navigation,
       settings,
+      footer,
     },
   };
 }

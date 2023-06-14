@@ -76,6 +76,140 @@ export type ArticleDocument<Lang extends string = string> =
     "article",
     Lang
   >;
+/** Content for Employee documents */
+interface EmployeeDocumentData {
+  /**
+   * Name field in *Employee*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  name: prismic.KeyTextField;
+  /**
+   * Title field in *Employee*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * Summary field in *Employee*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.summary
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  summary: prismic.RichTextField;
+  /**
+   * Image field in *Employee*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Listing Order field in *Employee*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.order
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/number
+   *
+   */
+  order: prismic.NumberField;
+  /**
+   * Type field in *Employee*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: doctor
+   * - **API ID Path**: employee.type
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  type: prismic.SelectField<"doctor" | "support", "filled">;
+  /**
+   * Slice Zone field in *Employee*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<EmployeeDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *Employee*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: employee.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  meta_description: prismic.RichTextField;
+  /**
+   * Meta Image field in *Employee*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: employee.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *Employee*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: employee.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+}
+/**
+ * Slice for *Employee → Slice Zone*
+ *
+ */
+type EmployeeDocumentDataSlicesSlice = TextSlice | QuoteSlice;
+/**
+ * Employee document from Prismic
+ *
+ * - **API ID**: `employee`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type EmployeeDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<EmployeeDocumentData>,
+    "employee",
+    Lang
+  >;
 /** Content for Footer documents */
 interface FooterDocumentData {
   /**
@@ -593,6 +727,7 @@ export type TreatmentDocument<Lang extends string = string> =
   >;
 export type AllDocumentTypes =
   | ArticleDocument
+  | EmployeeDocument
   | FooterDocument
   | NavigationDocument
   | PageDocument
@@ -1425,6 +1560,9 @@ declare module "@prismicio/client" {
       ArticleDocumentData,
       ArticleDocumentDataSlicesSlice,
       ArticleDocument,
+      EmployeeDocumentData,
+      EmployeeDocumentDataSlicesSlice,
+      EmployeeDocument,
       FooterDocumentData,
       FooterDocumentDataLinkGroup1Item,
       FooterDocumentDataLinkGroup2Item,
