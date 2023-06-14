@@ -1,0 +1,28 @@
+{
+  "id": "employee_listing",
+  "type": "SharedSlice",
+  "name": "EmployeeListing",
+  "description": "EmployeeListing",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "type": {
+          "type": "Select",
+          "config": {
+            "label": "Type",
+            "placeholder": "",
+            "options": ["doctor", "support"],
+            "default_value": "doctor"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const components = {
   book_appointment: dynamic(() => import("./BookAppointment")),
   contact_form: dynamic(() => import("./ContactForm")),
+  employee_listing: dynamic(() => import("./EmployeeListing")),
   hero: dynamic(() => import("./Hero")),
   hero_home: dynamic(() => import("./HeroHome")),
   image: dynamic(() => import("./Image")),

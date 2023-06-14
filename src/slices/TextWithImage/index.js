@@ -26,7 +26,7 @@ const TextWithImage = ({ slice }) => {
           </div>
           <div className="image">
             {prismic.isFilled.image(image) && (
-              <PrismicNextImage field={image} sizes="100vw" />
+              <PrismicNextImage field={image} sizes="100vw" alt="" />
             )}
           </div>
         </div>

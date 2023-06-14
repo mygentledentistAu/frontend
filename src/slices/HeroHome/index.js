@@ -21,7 +21,7 @@ const HeroHome = ({ slice }) => {
             <PrismicRichText field={slice.primary.title} />
           </div>
           <div className={styles.image}>
-            <PrismicNextImage field={slice.primary.image} />
+            <PrismicNextImage field={slice.primary.image} alt="" />
           </div>
         </article>
       </div>
@@ -33,7 +33,7 @@ const HeroHome = ({ slice }) => {
 
             <div className={styles.ctaList}>
               <PrismicNextLink field={slice.primary.icon_link}>
-                <PrismicNextImage field={slice.primary.icon_image} />
+                <PrismicNextImage field={slice.primary.icon_image} alt="" />
               </PrismicNextLink>
 
               <PrismicNextLink

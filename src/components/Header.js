@@ -5,7 +5,7 @@ import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 
 import { useState, useEffect } from "react";
 
-export const Header = ({ navigation, settings }) => {
+export const Header = ({ navigation }) => {
   const [open, setOpen] = useState(false);
 
   const openPanel = () => {

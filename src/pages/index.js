@@ -10,14 +10,7 @@ import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
 import { components } from "@/slices/";
 
-export default function Index({
-  page,
-  articles,
-  treatments,
-  navigation,
-  settings,
-  footer,
-}) {
+export default function Index({ page, context, navigation, settings, footer }) {
   return (
     <Layout navigation={navigation} settings={settings} footer={footer}>
       <Head>
@@ -27,7 +20,7 @@ export default function Index({
       <SliceZone
         slices={page.data.slices}
         components={components}
-        context={{ treatments: treatments }}
+        context={context}
       />
 
       {/* <Bounded size="widest">
@@ -61,23 +54,18 @@ export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
   const page = await client.getByUID("page", "home");
-
-  const articles = await client.getAllByType("article", {
-    orderings: [
-      { field: "my.article.publishDate", direction: "desc" },
-      { field: "document.first_publication_date", direction: "desc" },
-    ],
-  });
   const treatments = await client.getAllByType("treatment");
+  const employees = await client.getAllByType("employee");
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
   const footer = await client.getSingle("footer");
 
+  const context = { treatments, employees };
+
   return {
     props: {
       page,
-      articles,
-      treatments,
+      context,
       navigation,
       settings,
       footer,

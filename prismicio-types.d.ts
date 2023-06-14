@@ -430,16 +430,16 @@ export type NavigationDocument<Lang extends string = string> =
 /** Content for Page documents */
 interface PageDocumentData {
   /**
-   * Title field in *Page*
+   * Page Title field in *Page*
    *
-   * - **Field Type**: Title
+   * - **Field Type**: Rich Text
    * - **Placeholder**: Title for the page
    * - **API ID Path**: page.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  title: prismic.TitleField;
+  title: prismic.RichTextField;
   /**
    * Slice Zone field in *Page*
    *
@@ -463,7 +463,9 @@ type PageDocumentDataSlicesSlice =
   | ContactFormSlice
   | BookAppointmentSlice
   | TreatmentListSlice
-  | HeroHomeSlice;
+  | HeroHomeSlice
+  | EmployeeListingSlice
+  | HeroSlice;
 /**
  * Page document from Prismic
  *
@@ -856,10 +858,67 @@ export type ContactFormSlice = prismic.SharedSlice<
   ContactFormSliceVariation
 >;
 /**
+ * Primary content in EmployeeListing → Primary
+ *
+ */
+interface EmployeeListingSliceDefaultPrimary {
+  /**
+   * Type field in *EmployeeListing → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: doctor
+   * - **API ID Path**: employee_listing.primary.type
+   * - **Documentation**: https://prismic.io/docs/core-concepts/select
+   *
+   */
+  type: prismic.SelectField<"doctor" | "support", "filled">;
+}
+/**
+ * Default variation for EmployeeListing Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type EmployeeListingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<EmployeeListingSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *EmployeeListing*
+ *
+ */
+type EmployeeListingSliceVariation = EmployeeListingSliceDefault;
+/**
+ * EmployeeListing Shared Slice
+ *
+ * - **API ID**: `employee_listing`
+ * - **Description**: `EmployeeListing`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type EmployeeListingSlice = prismic.SharedSlice<
+  "employee_listing",
+  EmployeeListingSliceVariation
+>;
+/**
  * Primary content in Hero → Primary
  *
  */
 interface HeroSliceDefaultPrimary {
+  /**
+   * Heading field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
   /**
    * Text field in *Hero → Primary*
    *
@@ -1589,6 +1648,10 @@ declare module "@prismicio/client" {
       ContactFormSliceDefault,
       ContactFormSliceVariation,
       ContactFormSlice,
+      EmployeeListingSliceDefaultPrimary,
+      EmployeeListingSliceDefault,
+      EmployeeListingSliceVariation,
+      EmployeeListingSlice,
       HeroSliceDefaultPrimary,
       HeroSliceDefault,
       HeroSliceVariation,

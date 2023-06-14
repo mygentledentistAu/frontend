@@ -30,6 +30,7 @@ export function Article({ article }) {
               field={featuredImage}
               fill={true}
               className="object-cover"
+              alt=""
             />
           )}
         </div>

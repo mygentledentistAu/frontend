@@ -16,7 +16,7 @@ const TreatmentList = ({ slice, context = {} }) => {
     mapped[category] = mapped[category] ? [...treatments, t] : [t];
   });
 
-  const categories = Object.keys(mapped);
+  const categories = Object.keys(mapped).sort().reverse();
 
   return (
     <section
