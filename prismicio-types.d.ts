@@ -867,12 +867,11 @@ interface EmployeeListingSliceDefaultPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **Default Value**: doctor
    * - **API ID Path**: employee_listing.primary.type
    * - **Documentation**: https://prismic.io/docs/core-concepts/select
    *
    */
-  type: prismic.SelectField<"doctor" | "support", "filled">;
+  type: prismic.SelectField<"doctor" | "support">;
 }
 /**
  * Default variation for EmployeeListing Slice
