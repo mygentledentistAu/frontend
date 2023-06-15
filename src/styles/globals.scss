@@ -185,7 +185,6 @@ main {
   border-radius: var(--radius-1);
   white-space: nowrap;
   text-decoration: none !important;
-  width: min-content;
   max-width: 640px;
   display: inline-block;
   transition: background-color 200ms ease-in;
@@ -478,7 +477,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--color-primary-trans2);
+    border-bottom: 1px solid var(--color-dark-2);
 
     .logo {
       display: block;
@@ -493,7 +492,7 @@ footer {
 
   address {
     font-style: normal;
-    border-bottom: 1px solid var(--color-primary-trans2);
+    border-bottom: 1px solid var(--color-dark-2);
 
     strong {
       color: var(--color-light);
@@ -592,6 +591,7 @@ footer {
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
+    padding-block: var(--spacing-4);
   }
 
   .text {
