@@ -17,9 +17,14 @@
   --color-accent-2: hsl(45, 98%, 61%);
   --color-light: hsl(0, 0%, 100%);
   --color-light-1: hsl(0, 0%, 95%);
+  --color-light-2: hsl(216, 42%, 93%);
 
   --color-light-trans: hsla(0, 0%, 100%, 10%);
-  --color-light-trans2: hsla(207, 10%, 100%, 70%);
+  --color-light-trans2: hsla(207, 80%, 100%, 0.7);
+  --color-light-trans3: hsla(207, 80%, 80%, 0.5);
+
+  --color-dark-1: hsl(207, 80%, 20%);
+  --color-dark-2: hsl(207, 80%, 25%);
   --color-dark-trans: hsla(207, 50%, 25%, 50%);
 
   --radius-1: 0.25rem;
@@ -110,6 +115,10 @@ a {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }
+}
+
+::marker {
+  color: var(--color-secondary);
 }
 
 .richtext {
@@ -443,10 +452,15 @@ header {
 
 footer {
   container-type: inline-size;
-  --bg: hsla(216, 42%, 93%, 1);
+  --bg: var(--color-dark-1);
   background: var(--bg);
+  color: var(--color-light-trans2);
   border-bottom: 1rem solid var(--color-primary);
   overflow: hidden;
+
+  a {
+    color: var(--color-light);
+  }
 
   .bg {
     margin-block: var(--spacing-4);
@@ -468,8 +482,7 @@ footer {
 
     .logo {
       display: block;
-      background: url("/My-Gentle-Dentist.png") no-repeat;
-      mix-blend-mode: darken;
+      background: url("/My-Gentle-Dentist-Light.png") no-repeat;
       background-size: contain;
       text-indent: -9999px;
       height: 5rem;
@@ -483,6 +496,7 @@ footer {
     border-bottom: 1px solid var(--color-primary-trans2);
 
     strong {
+      color: var(--color-light);
       font-size: var(--font-size-6);
       font-weight: var(--font-weight-black);
     }
@@ -499,14 +513,13 @@ footer {
     a {
       display: inline-block;
       padding-block: var(--spacing-1);
-      color: var(--color-primary-1);
     }
   }
 
   .copyright {
     text-align: center;
     padding-block: var(--spacing-3);
-    color: var(--color-primary-trans);
+    color: var(--color-light-trans3);
     font-size: var(--font-size-8);
   }
 
@@ -515,8 +528,8 @@ footer {
       margin-block: var(--spacing-6);
       background: radial-gradient(
         50% 50% at 50% 50%,
-        hsla(216, 46%, 71%, 40%) 58.85%,
-        hsla(216, 46%, 71%, 0) 100%
+        var(--color-dark-2) 58.85%,
+        var(--color-dark-1) 100%
       );
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -550,8 +563,7 @@ footer {
 .hero {
   width: 100%;
   position: relative;
-  color: var(--color-light);
-  background: var(--color-secondary);
+  background: var(--color-light-2);
   min-height: 20rem;
 
   display: grid;
@@ -609,6 +621,9 @@ footer {
 }
 
 .hero-treatment {
+  color: var(--color-light);
+  background: var(--color-secondary);
+
   .grid-wrap {
     background: url("/tools.svg") no-repeat 98% center;
   }
