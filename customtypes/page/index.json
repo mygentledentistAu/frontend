@@ -32,7 +32,8 @@
             "treatment_list": { "type": "SharedSlice" },
             "hero_home": { "type": "SharedSlice" },
             "employee_listing": { "type": "SharedSlice" },
-            "hero": { "type": "SharedSlice" }
+            "hero": { "type": "SharedSlice" },
+            "card": { "type": "SharedSlice" }
           }
         }
       }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText } from "./PrismicRichText";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 export function Footer({ footer, settings }) {
   function renderAddress(i = 1) {

@@ -465,7 +465,8 @@ type PageDocumentDataSlicesSlice =
   | TreatmentListSlice
   | HeroHomeSlice
   | EmployeeListingSlice
-  | HeroSlice;
+  | HeroSlice
+  | CardSlice;
 /**
  * Page document from Prismic
  *
@@ -827,6 +828,89 @@ export type BookAppointmentSlice = prismic.SharedSlice<
   "book_appointment",
   BookAppointmentSliceVariation
 >;
+/**
+ * Primary content in WideCard → Primary
+ *
+ */
+interface CardSliceDefaultPrimary {
+  /**
+   * Title field in *WideCard → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * Text field in *WideCard → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+  /**
+   * Image field in *WideCard → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Button Link field in *WideCard → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismic.LinkField;
+  /**
+   * Button Label field in *WideCard → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  button_label: prismic.KeyTextField;
+}
+/**
+ * Default variation for WideCard Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CardSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *WideCard*
+ *
+ */
+type CardSliceVariation = CardSliceDefault;
+/**
+ * WideCard Shared Slice
+ *
+ * - **API ID**: `card`
+ * - **Description**: `Card`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CardSlice = prismic.SharedSlice<"card", CardSliceVariation>;
 /**
  * Default variation for ContactForm Slice
  *
@@ -1644,6 +1728,10 @@ declare module "@prismicio/client" {
       BookAppointmentSliceDefault,
       BookAppointmentSliceVariation,
       BookAppointmentSlice,
+      CardSliceDefaultPrimary,
+      CardSliceDefault,
+      CardSliceVariation,
+      CardSlice,
       ContactFormSliceDefault,
       ContactFormSliceVariation,
       ContactFormSlice,

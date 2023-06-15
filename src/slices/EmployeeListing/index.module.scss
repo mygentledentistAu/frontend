@@ -17,6 +17,8 @@
   article {
     overflow: hidden;
     position: relative;
+    border-radius: var(--radius-1);
+    overflow: hidden;
 
     &:hover {
       .rich {
@@ -36,7 +38,7 @@
 
   .text {
     background: var(--color-light-trans2);
-    width: 80%;
+    width: 85%;
     height: 5rem;
     padding: var(--spacing-3);
     border-right: 0.4rem solid var(--color-secondary);

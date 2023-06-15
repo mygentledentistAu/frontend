@@ -48,7 +48,9 @@ const EmployeeListing = ({ slice, context = {} }) => {
         <ul>
           {filtered.map((e) => (
             <li key={e.uid}>
+              {/* <PrismicNextLink field={}> */}
               <Card data={e.data} />
+              {/* </PrismicNextLink> */}
             </li>
           ))}
         </ul>
