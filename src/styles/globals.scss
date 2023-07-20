@@ -12,6 +12,7 @@
 
   --color-secondary: hsl(194, 88%, 40%);
   --color-secondary-1: hsla(194, 30%, 35%, 8%);
+  --color-secondary-2: hsla(194, 30%, 35%, 15%);
 
   --color-accent-1: hsl(183, 100%, 90%);
   --color-accent-2: hsl(45, 98%, 61%);
@@ -525,11 +526,7 @@ footer {
   @container (min-width: 864px) {
     .bg {
       margin-block: var(--spacing-6);
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        var(--color-dark-2) 58.85%,
-        var(--color-dark-1) 100%
-      );
+      background: radial-gradient(50% 50% at 50% 50%, var(--color-dark-2) 58.85%, var(--color-dark-1) 100%);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1px;

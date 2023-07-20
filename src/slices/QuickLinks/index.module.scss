@@ -24,19 +24,21 @@
   a {
     display: inline-block;
     color: var(--color-primary);
-    border: 1px solid var(--color-secondary);
-    padding: 0.3rem 1rem;
+    border: 1px solid var(--color-secondary-2);
     border-radius: 3rem;
     margin: 0.25rem;
     white-space: nowrap;
     text-decoration: none;
     height: min-content;
+    padding: 0.3rem 1rem;
+    background: url("../../../public/stars-blue2.svg") no-repeat;
+    background-size: 1.2rem;
+    background-position: 0.75rem 50%;
+    padding-left: 2.4rem !important;
     transition: all ease-in-out 800ms;
 
     &:hover {
-      // color: var(--color-light);
       border-color: var(--color-light);
-      // background: var(--color-secondary);
       box-shadow: 0 0 3rem 0 var(--color-secondary);
     }
   }
