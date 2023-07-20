@@ -33,7 +33,8 @@
             "hero_home": { "type": "SharedSlice" },
             "employee_listing": { "type": "SharedSlice" },
             "hero": { "type": "SharedSlice" },
-            "card": { "type": "SharedSlice" }
+            "card": { "type": "SharedSlice" },
+            "quick_links": { "type": "SharedSlice" }
           }
         }
       }

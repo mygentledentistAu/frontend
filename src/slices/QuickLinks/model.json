@@ -1,0 +1,37 @@
+{
+  "id": "quick_links",
+  "type": "SharedSlice",
+  "name": "QuickLinks",
+  "description": "QuickLinks",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "link",
+            "placeholder": "Link to a Treatment or any other Page",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "label": {
+          "type": "Text",
+          "config": { "label": "label", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

@@ -11,6 +11,7 @@ export const components = {
   hero_home: dynamic(() => import("./HeroHome")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
+  quick_links: dynamic(() => import("./QuickLinks")),
   quote: dynamic(() => import("./Quote")),
   text: dynamic(() => import("./Text")),
   text_with_image: dynamic(() => import("./TextWithImage")),
