@@ -4,25 +4,26 @@
 
   h2 {
     font-size: var(--font-size-4);
+    font-family: var(--family-serif);
     line-height: 1.4;
-    padding-bottom: var(--spacing-4);
+    padding-block: var(--spacing-3);
     font-weight: var(--font-weight-black);
     color: var(--color-primary);
   }
 
   .listWrap {
-    padding-block: var(--spacing-5);
-    overflow-y: hidden;
-    overflow-x: scroll;
+    padding-block: var(--spacing-2);
   }
 
   .list {
-    max-height: 7rem;
-    width: 170%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   a {
     display: inline-block;
+    font-size: var(--font-size-7);
     color: var(--color-primary);
     border: 1px solid var(--color-secondary-2);
     border-radius: 3rem;
@@ -45,6 +46,7 @@
 
   @container (min-width: 768px) {
     .listWrap {
+      padding-block: var(--spacing-5);
       height: auto;
       overflow: visible;
     }
