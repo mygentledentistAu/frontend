@@ -33,6 +33,7 @@ const BookAppointment = ({ slice }) => {
             <PrismicNextLink
               field={slice.primary.button_link}
               className="button button--primary"
+              data-open-dialog="#book-dialog"
             >
               {slice.primary.button_label}
             </PrismicNextLink>

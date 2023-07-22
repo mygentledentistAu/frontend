@@ -51,16 +51,16 @@ export const Header = ({ navigation }) => {
             <ul>
               {navigation.data?.links.map((item) => (
                 <li key={prismic.asText(item.label)}>
-                  <PrismicNextLink
-                    field={item.link}
-                    className={
-                      item.style === "button" ? "button button--small" : ""
-                    }
-                  >
+                  <PrismicNextLink field={item.link} className={item.style === "button" ? "button button--small" : ""}>
                     <PrismicText field={item.label} />
                   </PrismicNextLink>
                 </li>
               ))}
+              <li>
+                <a href="#" className="button button--small" data-open-dialog="#book-dialog">
+                  Book Now
+                </a>
+              </li>
             </ul>
           </div>
         </nav>

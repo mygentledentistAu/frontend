@@ -30,6 +30,7 @@
 
   --radius-1: 0.25rem;
   --radius-2: 0.5rem;
+  --radius-3: 1rem;
   --radius-4: 1.5rem;
   --radius-5: 2rem;
 
@@ -136,10 +137,18 @@ a {
   }
 
   p {
-    margin-top: 1.7em;
+    margin-top: 1.2em;
   }
 
-  p:first-child {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.3em;
+  }
+
+  :is(p, h2, h3, h4, h5, h6):first-child {
     margin-top: 0;
   }
 
@@ -455,7 +464,7 @@ footer {
   --bg: var(--color-dark-1);
   background: var(--bg);
   color: var(--color-light-trans2);
-  border-bottom: 1rem solid var(--color-primary);
+  padding-bottom: 2rem;
   overflow: hidden;
 
   a {
@@ -491,15 +500,15 @@ footer {
     }
   }
 
+  strong {
+    color: var(--color-light);
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-black);
+  }
+
   address {
     font-style: normal;
     border-bottom: 1px solid var(--color-dark-2);
-
-    strong {
-      color: var(--color-light);
-      font-size: var(--font-size-6);
-      font-weight: var(--font-weight-black);
-    }
 
     a {
       display: inline-block;
@@ -649,6 +658,10 @@ footer {
     border-bottom-right-radius: 6rem;
   }
 
+  .richtext {
+    margin-bottom: var(--spacing-4);
+  }
+
   @container (min-width: 1100px) {
     .inner {
       display: grid;
@@ -675,4 +688,72 @@ footer {
 
 .slice-text {
   margin-block: var(--spacing-5);
+}
+
+.book-dialog {
+  left: 50%;
+  top: 10%;
+  translate: -50% 0%;
+  border: none;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-top: 1rem solid var(--color-primary);
+  border-bottom-left-radius: var(--radius-3);
+  border-bottom-right-radius: var(--radius-3);
+  padding: var(--spacing-4);
+  width: 90%;
+  max-width: 750px;
+
+  @media (min-width: 768px) {
+    top: 30%;
+  }
+
+  &::backdrop {
+    background: hsl(207deg 100% 20% / 60%);
+  }
+
+  .close-dialog {
+    background: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-dark-trans);
+    background-color: var(--color-light);
+    border-radius: 2rem;
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-black);
+    white-space: nowrap;
+    align-items: center;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 1rem 0 var(--color-dark-trans);
+    }
+  }
+
+  h2 {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-secondary);
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  .button {
+    margin-top: var(--spacing-3);
+  }
+
+  &__locations {
+    margin-top: var(--spacing-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
 }

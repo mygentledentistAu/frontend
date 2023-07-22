@@ -72,6 +72,29 @@
           }
         }
       }
+    },
+    "Booking Dialog": {
+      "booking_dialog": {
+        "type": "Group",
+        "config": {
+          "label": "Appointment Booking Dialog",
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": { "label": "Title", "placeholder": "" }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,strong,em,hyperlink"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

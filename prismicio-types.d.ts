@@ -299,6 +299,17 @@ interface FooterDocumentData {
   copyright: prismic.KeyTextField;
 
   /**
+   * Link Group 1 Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_1_title: prismic.KeyTextField;
+
+  /**
    * Link Group 1 field in *Footer*
    *
    * - **Field Type**: Group
@@ -310,6 +321,17 @@ interface FooterDocumentData {
   link_group_1: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup1Item>>;
 
   /**
+   * Link Group 2 Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_2_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_2_title: prismic.KeyTextField;
+
+  /**
    * Link Group 2 field in *Footer*
    *
    * - **Field Type**: Group
@@ -319,6 +341,17 @@ interface FooterDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   link_group_2: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup2Item>>;
+
+  /**
+   * Link Group 3 Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_3_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_3_title: prismic.KeyTextField;
 
   /**
    * Link Group 3 field in *Footer*
@@ -525,6 +558,31 @@ export interface SettingsDocumentDataLocationsItem {
 }
 
 /**
+ * Item in *Settings → Appointment Booking Dialog*
+ */
+export interface SettingsDocumentDataBookingDialogItem {
+  /**
+   * Title field in *Settings → Appointment Booking Dialog*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.booking_dialog[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Settings → Appointment Booking Dialog*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.booking_dialog[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
  * Content for Settings documents
  */
 interface SettingsDocumentData {
@@ -580,7 +638,19 @@ interface SettingsDocumentData {
    * - **Tab**: Locations
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>>;
+  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>>
+  /**
+   * Appointment Booking Dialog field in *Settings*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.booking_dialog[]
+   * - **Tab**: Booking Dialog
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */;
+  booking_dialog: prismic.GroupField<
+    Simplify<SettingsDocumentDataBookingDialogItem>
+  >;
 }
 
 /**

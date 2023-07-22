@@ -10,6 +10,10 @@
         "type": "Text",
         "config": { "label": "Copyright", "placeholder": "" }
       },
+      "link_group_1_title": {
+        "type": "Text",
+        "config": { "label": "Link Group 1 Title", "placeholder": "" }
+      },
       "link_group_1": {
         "type": "Group",
         "config": {
@@ -31,6 +35,10 @@
           }
         }
       },
+      "link_group_2_title": {
+        "type": "Text",
+        "config": { "label": "Link Group 2 Title", "placeholder": "" }
+      },
       "link_group_2": {
         "type": "Group",
         "config": {
@@ -51,6 +59,10 @@
             }
           }
         }
+      },
+      "link_group_3_title": {
+        "type": "Text",
+        "config": { "label": "Link Group 3 Title", "placeholder": "" }
       },
       "link_group_3": {
         "type": "Group",

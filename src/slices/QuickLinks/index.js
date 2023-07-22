@@ -17,7 +17,7 @@ const QuickLinks = ({ slice }) => {
     <section className={styles.quickLinks}>
       <div className="grid-wrap">
         <div className={styles.inner}>
-          <div>
+          <div className={styles.headingWrap}>
             <h2>{slice.primary.title}</h2>
           </div>
           <div className={styles.listWrap}>

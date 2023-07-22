@@ -6,7 +6,7 @@
     font-size: var(--font-size-4);
     font-family: var(--family-serif);
     line-height: 1.4;
-    padding-block: var(--spacing-3);
+    padding-block: var(--spacing-4);
     font-weight: var(--font-weight-black);
     color: var(--color-primary);
   }
@@ -45,6 +45,24 @@
   }
 
   @container (min-width: 768px) {
+    .inner {
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      align-items: center;
+      gap: var(--spacing-2);
+
+      padding-left: 2.4rem !important;
+    }
+
+    .headingWrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: url("../../../public/arrow.svg") no-repeat;
+      background-size: 15rem;
+      background-position: 100% 75%;
+    }
+
     .listWrap {
       padding-block: var(--spacing-5);
       height: auto;
@@ -63,13 +81,6 @@
     a {
       padding: 0.5rem 1.2rem;
       margin: 0;
-    }
-
-    .inner {
-      display: grid;
-      grid-template-columns: 2fr 5fr;
-      align-items: center;
-      gap: var(--spacing-2);
     }
   }
 }
