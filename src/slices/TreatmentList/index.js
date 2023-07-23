@@ -19,11 +19,7 @@ const TreatmentList = ({ slice, context = {} }) => {
   const categories = Object.keys(mapped).sort().reverse();
 
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-      className={styles.treatmentList}
-    >
+    <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} className={styles.treatmentList}>
       <div className="grid-wrap">
         <h2>{slice.primary.title}</h2>
 
@@ -37,9 +33,7 @@ const TreatmentList = ({ slice, context = {} }) => {
                   {treatments.map((t) => (
                     <li key={t.uid}>
                       <h4>
-                        <PrismicNextLink href={t.url}>
-                          {t.data.title}
-                        </PrismicNextLink>
+                        <PrismicNextLink href={t.url}>{t.data.title}</PrismicNextLink>
                       </h4>
                     </li>
                   ))}
@@ -49,18 +43,17 @@ const TreatmentList = ({ slice, context = {} }) => {
           })}
         </div>
 
-        <article>
-          <div></div>
-          <div className={styles.group2}>
-            <p>{slice.primary.footer_text}</p>
-            <PrismicNextLink
-              field={slice.primary.footer_link}
-              className="button button--secondary"
-            >
-              {slice.primary.footer_link_text}
-            </PrismicNextLink>
-          </div>
-        </article>
+        {slice.primary.footer_link_text ? (
+          <article>
+            <div></div>
+            <div className={styles.group2}>
+              <p>{slice.primary.footer_text}</p>
+              <PrismicNextLink field={slice.primary.footer_link} className="button button--secondary">
+                {slice.primary.footer_link_text}
+              </PrismicNextLink>
+            </div>
+          </article>
+        ) : null}
       </div>
     </section>
   );

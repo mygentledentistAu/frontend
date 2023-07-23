@@ -60,8 +60,8 @@
   //   --font-size-7: 0.95rem; //
   //   --font-size-8: 0.8rem; //
 
-  --font-size-7: 0.95rem; //
   --font-size-8: 0.8rem; //
+  --font-size-7: 0.95rem; //
   --font-size-6: clamp(1rem, 0.22vw + 0.95rem, 1.13rem);
   --font-size-5: clamp(1.25rem, 0.44vw + 1.15rem, 1.5rem);
   --font-size-4: clamp(1.56rem, 0.77vw + 1.38rem, 2rem);
@@ -243,6 +243,10 @@ main {
 
 :focus:not(:focus-visible) {
   outline: none !important;
+}
+
+figcaption {
+  font-family: var(--family-serif);
 }
 
 /* ------------------- Common Slices ------------------- */
@@ -480,6 +484,7 @@ footer {
   article {
     background: var(--bg);
     padding-block: var(--spacing-3);
+    font-size: var(--font-size-7);
   }
 
   .box-1 {
@@ -501,9 +506,10 @@ footer {
   }
 
   strong {
-    color: var(--color-light);
+    color: var(--color-secondary);
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-black);
+    line-height: 2.2;
   }
 
   address {
@@ -569,7 +575,7 @@ footer {
   width: 100%;
   position: relative;
   background: var(--color-light-2);
-  min-height: 20rem;
+  min-height: 15rem;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -604,15 +610,16 @@ footer {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100%;
+    color: var(--color-secondary);
+    text-shadow: 0.02rem 0.02rem 0.2rem var(--color-light-2);
   }
 
   h3 {
     font-family: var(--family-serif);
     font-style: italic;
     font-size: var(--font-size-5);
-    color: var(--color-primary);
   }
 
   h1 {
@@ -627,6 +634,7 @@ footer {
 }
 
 .hero-treatment {
+  container-type: inline-size;
   color: var(--color-light);
   background: var(--color-secondary);
 
@@ -634,19 +642,28 @@ footer {
     background: url("/tools.svg") no-repeat 98% center;
   }
 
+  h1 {
+    text-shadow: 0.25rem 0.25rem 1rem var(--color-secondary);
+  }
+
   .inner {
-    padding-right: 20rem;
     height: 100%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
   }
+
+  @container (min-width: 1100px) {
+    .inner {
+      padding-right: 20rem;
+    }
+  }
 }
 
 .text-image {
   container-type: inline-size;
-  margin-block: var(--spacing-4);
+  margin-block: var(--spacing-6);
 
   .text {
     max-width: 70ch;
@@ -655,7 +672,8 @@ footer {
   .image {
     margin-top: var(--spacing-4);
     overflow: hidden;
-    border-bottom-right-radius: 6rem;
+    border-radius: 0.5rem;
+    border-bottom-right-radius: 4rem;
   }
 
   .richtext {
@@ -672,7 +690,7 @@ footer {
     &.text-image--left {
       .image {
         order: 1;
-        border-bottom-right-radius: 0;
+        border-bottom-right-radius: 0.5rem;
         border-bottom-left-radius: 6rem;
       }
       .text {
@@ -755,5 +773,32 @@ footer {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-4);
+  }
+}
+
+.quote {
+  container-type: inline-size;
+  margin-block: var(--spacing-5);
+
+  .grid-wrap {
+    padding-inline: var(--spacing-4);
+    border-left: 0.5rem solid var(--color-secondary);
+  }
+
+  @container (min-width: 1100px) {
+    .grid-wrap {
+      padding-inline: var(--spacing-5);
+    }
+  }
+
+  &__content {
+    font-family: var(--family-serif);
+    font-size: var(--font-size-5);
+  }
+
+  &__by {
+    font-family: var(--family-sans);
+    text-align: right;
+    color: var(--color-dark-trans);
   }
 }

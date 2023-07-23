@@ -34,7 +34,8 @@
             "employee_listing": { "type": "SharedSlice" },
             "hero": { "type": "SharedSlice" },
             "card": { "type": "SharedSlice" },
-            "quick_links": { "type": "SharedSlice" }
+            "quick_links": { "type": "SharedSlice" },
+            "text_with_image": { "type": "SharedSlice" }
           }
         }
       }

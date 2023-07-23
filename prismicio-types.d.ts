@@ -471,7 +471,8 @@ type PageDocumentDataSlicesSlice =
   | EmployeeListingSlice
   | HeroSlice
   | CardSlice
-  | QuickLinksSlice;
+  | QuickLinksSlice
+  | TextWithImageSlice;
 
 /**
  * Content for Page documents
@@ -673,7 +674,7 @@ type TreatmentDocumentDataSlicesSlice =
   | TextSlice
   | TextWithImageSlice
   | ImageSlice
-  | HeroSlice;
+  | BookAppointmentSlice;
 
 /**
  * Content for Treatment documents

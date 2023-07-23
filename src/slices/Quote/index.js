@@ -1,22 +1,24 @@
 import * as prismic from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 
-import { Bounded } from "@/components/Bounded";
-
 const Quote = ({ slice }) => {
   return (
-    <Bounded as="section" size="wide">
-      {prismic.isFilled.richText(slice.primary.quote) && (
-        <div className="font-serif text-3xl italic leading-relaxed">
-          &ldquo;
-          <PrismicText field={slice.primary.quote} />
-          &rdquo;
-          {prismic.isFilled.keyText(slice.primary.source) && (
-            <> &mdash; {slice.primary.source}</>
-          )}
-        </div>
-      )}
-    </Bounded>
+    <section className="quote">
+      <div className="grid-wrap">
+        {prismic.isFilled.richText(slice.primary.quote) && (
+          <>
+            <div className="quote__content">
+              &ldquo;
+              <PrismicText field={slice.primary.quote} />
+              &rdquo;
+            </div>
+            <div className="quote__by">
+              {prismic.isFilled.keyText(slice.primary.source) && <> &mdash; {slice.primary.source}</>}
+            </div>
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 

@@ -49,7 +49,7 @@
             "text": { "type": "SharedSlice" },
             "text_with_image": { "type": "SharedSlice" },
             "image": { "type": "SharedSlice" },
-            "hero": { "type": "SharedSlice" }
+            "book_appointment": { "type": "SharedSlice" }
           }
         }
       }
