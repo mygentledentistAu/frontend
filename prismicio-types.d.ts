@@ -157,7 +157,8 @@ interface EmployeeDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<EmployeeDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<EmployeeDocumentDataSlicesSlice>
+  /**
    * Meta Description field in *Employee*
    *
    * - **Field Type**: Rich Text
@@ -618,7 +619,8 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profilePicture: prismic.ImageField<never> /**
+  profilePicture: prismic.ImageField<never>
+  /**
    * Email field in *Settings*
    *
    * - **Field Type**: Text
@@ -638,7 +640,8 @@ interface SettingsDocumentData {
    * - **Tab**: Locations
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>> /**
+  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>>
+  /**
    * Appointment Booking Dialog field in *Settings*
    *
    * - **Field Type**: Group
@@ -747,7 +750,8 @@ interface TreatmentDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<TreatmentDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<TreatmentDocumentDataSlicesSlice>
+  /**
    * Meta Description field in *Treatment*
    *
    * - **Field Type**: Rich Text
@@ -1303,6 +1307,26 @@ export interface HeroVideoSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Button Link field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Label field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_label: prismic.KeyTextField;
 }
 
 /**
@@ -1929,7 +1953,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig,
+      options?: prismic.ClientConfig
     ): prismic.Client<AllDocumentTypes>;
   }
 

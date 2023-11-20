@@ -10,17 +10,21 @@
     position: relative;
     margin: 0 auto;
     margin-top: -3.2rem; // hide youtube avatar
-    // min-height: 21rem;
+    min-height: 20rem;
+    background: white;
     scale: 1.2;
 
     iframe {
-      height: 100%;
+      aspect-ratio: 16/9;
       border: none;
     }
 
     .videoOverlay {
       position: absolute;
-      inset: 0 0 0 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      aspect-ratio: 16/9;
       background: hsla(0, 0, 0, 0.2);
     }
 
@@ -34,6 +38,7 @@
   .topSection {
     // min-height: 24rem;
     width: 100%;
+
     aspect-ratio: 16/9;
     position: absolute;
     top: 0;
@@ -61,6 +66,7 @@
         font-weight: var(--font-weight-normal);
         line-height: 1.4;
         margin-top: var(--spacing-2);
+        margin-bottom: var(--spacing-4);
       }
 
     }

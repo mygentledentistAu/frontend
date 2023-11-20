@@ -51,6 +51,18 @@
 						}
 					}
 				]
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"button_label": {
+				"__TYPE__": "FieldContent",
+				"value": "bent",
+				"type": "Text"
 			}
 		},
 		"items": [

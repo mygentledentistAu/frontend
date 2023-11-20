@@ -33,6 +33,12 @@ const HeroVideo = ({ slice }) => {
       <div className={styles.content}>
             <PrismicRichText field={slice.primary.title} />
             <h2>{slice.primary.short_text}</h2>
+            <PrismicNextLink
+                field={slice.primary.button_link}
+                className="button button--primary"
+              >
+                {slice.primary.button_label}
+              </PrismicNextLink>
           </div>
        </div>
         </article>
