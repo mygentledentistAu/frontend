@@ -157,8 +157,7 @@ interface EmployeeDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<EmployeeDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<EmployeeDocumentDataSlicesSlice> /**
    * Meta Description field in *Employee*
    *
    * - **Field Type**: Rich Text
@@ -461,6 +460,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | HeroVideoSlice
   | ImageSlice
   | QuoteSlice
   | TextSlice
@@ -618,8 +618,7 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profilePicture: prismic.ImageField<never>
-  /**
+  profilePicture: prismic.ImageField<never> /**
    * Email field in *Settings*
    *
    * - **Field Type**: Text
@@ -639,8 +638,7 @@ interface SettingsDocumentData {
    * - **Tab**: Locations
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>>
-  /**
+  locations: prismic.GroupField<Simplify<SettingsDocumentDataLocationsItem>> /**
    * Appointment Booking Dialog field in *Settings*
    *
    * - **Field Type**: Group
@@ -749,8 +747,7 @@ interface TreatmentDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<TreatmentDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<TreatmentDocumentDataSlicesSlice> /**
    * Meta Description field in *Treatment*
    *
    * - **Field Type**: Rich Text
@@ -1251,6 +1248,116 @@ type HeroHomeSliceVariation = HeroHomeSliceDefault;
 export type HeroHomeSlice = prismic.SharedSlice<
   "hero_home",
   HeroHomeSliceVariation
+>;
+
+/**
+ * Primary content in *HeroVideo → Primary*
+ */
+export interface HeroVideoSliceDefaultPrimary {
+  /**
+   * Youtube Video ID field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.video_id
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  video_id: prismic.KeyTextField;
+
+  /**
+   * Title field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Short Text field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.short_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  short_text: prismic.KeyTextField;
+
+  /**
+   * Locations Title field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.locations_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  locations_title: prismic.KeyTextField;
+
+  /**
+   * Image field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *HeroVideo → Items*
+ */
+export interface HeroVideoSliceDefaultItem {
+  /**
+   * Button Link field in *HeroVideo → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.items[].button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+
+  /**
+   * Button Label field in *HeroVideo → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.items[].button_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for HeroVideo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroVideoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroVideoSliceDefaultPrimary>,
+  Simplify<HeroVideoSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *HeroVideo*
+ */
+type HeroVideoSliceVariation = HeroVideoSliceDefault;
+
+/**
+ * HeroVideo Shared Slice
+ *
+ * - **API ID**: `hero_video`
+ * - **Description**: HeroVideo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroVideoSlice = prismic.SharedSlice<
+  "hero_video",
+  HeroVideoSliceVariation
 >;
 
 /**
@@ -1822,7 +1929,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -1861,6 +1968,9 @@ declare module "@prismicio/client" {
       HeroHomeSlice,
       HeroHomeSliceVariation,
       HeroHomeSliceDefault,
+      HeroVideoSlice,
+      HeroVideoSliceVariation,
+      HeroVideoSliceDefault,
       ImageSlice,
       ImageSliceVariation,
       ImageSliceDefault,

@@ -1,0 +1,57 @@
+{
+  "id": "hero_video",
+  "type": "SharedSlice",
+  "name": "HeroVideo",
+  "description": "HeroVideo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "video_id": {
+          "type": "Text",
+          "config": { "label": "Youtube Video ID", "placeholder": "" }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "short_text": {
+          "type": "Text",
+          "config": { "label": "Short Text", "placeholder": "" }
+        },
+        "locations_title": {
+          "type": "Text",
+          "config": { "label": "Locations Title", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        }
+      },
+      "items": {
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_label": {
+          "type": "Text",
+          "config": { "label": "Button Label", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

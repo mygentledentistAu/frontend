@@ -9,6 +9,7 @@ export const components = {
   employee_listing: dynamic(() => import("./EmployeeListing")),
   hero: dynamic(() => import("./Hero")),
   hero_home: dynamic(() => import("./HeroHome")),
+  hero_video: dynamic(() => import("./HeroVideo")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
   quick_links: dynamic(() => import("./QuickLinks")),
