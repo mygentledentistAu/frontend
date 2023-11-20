@@ -43,7 +43,7 @@ const HeroVideo = ({ slice }) => {
           <div className={styles.locationTitle}>{slice.primary.locations_title}</div>
           <div className={styles.locationLinks}>
             {slice.items.map(item => 
-            <PrismicNextLink field={item.button_link}>
+            <PrismicNextLink field={item.button_link} key={item.button_label}>
               <i></i>
               {item.button_label}
             </PrismicNextLink>)}
