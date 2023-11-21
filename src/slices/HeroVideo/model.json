@@ -16,6 +16,14 @@
           "type": "Text",
           "config": { "label": "Youtube Video ID", "placeholder": "" }
         },
+        "mobile_image": {
+          "type": "Image",
+          "config": {
+            "label": "Mobile Image",
+            "constraint": { "width": 430, "height": 574 },
+            "thumbnails": []
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {

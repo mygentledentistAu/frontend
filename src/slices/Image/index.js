@@ -11,7 +11,7 @@ const Image = ({ slice }) => {
       <div className="grid-wrap">
         <figure>
           {prismic.isFilled.image(image) && (
-            <div className="bg-gray-100">
+            <div className="image-wrap">
               <PrismicNextImage field={image} />
             </div>
           )}

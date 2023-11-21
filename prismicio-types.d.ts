@@ -1269,6 +1269,16 @@ export interface HeroVideoSliceDefaultPrimary {
   video_id: prismic.KeyTextField;
 
   /**
+   * Mobile Image field in *HeroVideo → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_video.primary.mobile_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  mobile_image: prismic.ImageField<never>;
+
+  /**
    * Title field in *HeroVideo → Primary*
    *
    * - **Field Type**: Title
