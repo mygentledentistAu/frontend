@@ -16,16 +16,19 @@ const QuickLinks = ({ slice }) => {
   return (
     <section className={styles.quickLinks}>
       <div className="grid-wrap">
-        <div className={styles.list}>
-          <div className={styles.heading}>
+        <div className={styles.inner}>
+          <div className={styles.headingWrap}>
             <h2>{slice.primary.title}</h2>
           </div>
-          {slice.items.map((item, i) => (
-            <PrismicNextLink key={i} field={item.link}>
-              {item.label}
-            </PrismicNextLink>
-          ))}
-          <div className={styles.empty}></div>
+          <div className={styles.listWrap}>
+            <div className={styles.list}>
+              {slice.items.map((item, i) => (
+                <PrismicNextLink key={i} field={item.link}>
+                  {item.label}
+                </PrismicNextLink>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

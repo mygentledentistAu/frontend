@@ -123,7 +123,8 @@
 
     .locationLinks {
       display: flex;
-      gap: 2px;
+      border-radius: 0.3rem;
+      overflow: hidden;
     }
 
     a {
@@ -135,6 +136,7 @@
       text-decoration: none;
       display: flex;
       align-items: center;
+      justify-content: center;
       font-weight: var(--font-weight-bold);
       font-size: var(--font-size-6);
       transition: all linear 300ms;
@@ -142,8 +144,12 @@
       background-size: 1em;
       background-position: 88% center;
 
+      &:last-child {
+        box-shadow: -2rem 1px 0px -1.85rem var(--color-light-trans);
+      }
+
       &:hover {
-        background-image: url("../../../public/link-arrow.svg");
+        background-image: url("../../../public/arrow-white.svg");
         background-position: 90% center;
       }
 

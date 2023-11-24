@@ -6,6 +6,7 @@
   --color-primary-1: hsl(207, 100%, 25%);
   --color-primary-2: hsl(207, 70%, 30%);
   --color-primary-3: hsl(207, 70%, 20%);
+
   --color-primary-trans1: hsla(207, 70%, 15%, 70%);
   --color-primary-trans2: hsla(207, 70%, 15%, 50%);
   --color-primary-trans3: hsla(207, 70%, 57%, 90%);
@@ -29,6 +30,10 @@
   --color-dark-1: hsl(207, 80%, 20%);
   --color-dark-2: hsl(207, 80%, 25%);
   --color-dark-trans: hsla(207, 50%, 25%, 50%);
+
+  --color-neutral-1: hsl(207, 40%, 20%);
+  --color-neutral-2: hsl(207, 40%, 30%);
+  --color-neutral-3: hsl(207, 30%, 40%);
 
   --radius-1: 0.25rem;
   --radius-2: 0.5rem;
@@ -80,7 +85,7 @@
 html {
   font-size: 15px;
   font-family: var(--family-sans);
-  color: var(--color-primary-3);
+  color: var(--color-neutral-2);
   line-height: 1.5;
 }
 
@@ -122,7 +127,7 @@ a {
 }
 
 ::marker {
-  color: var(--color-secondary);
+  color: var(--color-accent-3);
 }
 
 .richtext {

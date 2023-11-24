@@ -1,0 +1,86 @@
+.quickLinks {
+  container-type: inline-size;
+  position: relative;
+
+  h2 {
+    font-size: var(--font-size-4);
+    font-family: var(--family-serif);
+    line-height: 1.4;
+    padding-block: var(--spacing-4);
+    font-weight: var(--font-weight-black);
+    color: var(--color-primary);
+  }
+
+  .listWrap {
+    padding-block: var(--spacing-2);
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  a {
+    display: inline-block;
+    font-size: var(--font-size-7);
+    color: var(--color-primary);
+    border: 1px solid var(--color-secondary-2);
+    border-radius: 3rem;
+    margin: 0.25rem;
+    white-space: nowrap;
+    text-decoration: none;
+    height: min-content;
+    padding: 0.3rem 1rem;
+    background: url("../../../public/stars-blue2.svg") no-repeat;
+    background-size: 1.2rem;
+    background-position: 0.75rem 50%;
+    padding-left: 2.4rem !important;
+    transition: all ease-in-out 800ms;
+
+    &:hover {
+      border-color: var(--color-light);
+      box-shadow: 0 0 3rem 0 var(--color-secondary);
+    }
+  }
+
+  @container (min-width: 768px) {
+    .inner {
+      display: grid;
+      grid-template-columns: 2fr 5fr;
+      align-items: center;
+      gap: var(--spacing-2);
+
+      padding-left: 2.4rem !important;
+    }
+
+    .headingWrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: url("../../../public/curved-arrow.svg") no-repeat;
+      background-size: 15rem;
+      background-position: 100% 75%;
+    }
+
+    .listWrap {
+      padding-block: var(--spacing-5);
+      height: auto;
+      overflow: visible;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 0.7rem;
+      max-height: none;
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    a {
+      padding: 0.5rem 1.2rem;
+      margin: 0;
+    }
+  }
+}

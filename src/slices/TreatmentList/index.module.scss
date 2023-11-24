@@ -1,15 +1,13 @@
 .treatmentList {
   container-type: inline-size;
   padding-block: var(--spacing-5);
-  background: linear-gradient(
-    180deg,
-    var(--color-light) 0%,
-    var(--color-secondary-1) 86.22%
-  );
+  background: linear-gradient(180deg,
+      var(--color-light) 0%,
+      var(--color-secondary-1) 86.22%);
 
   h2 {
-    font-size: var(--font-size-3);
-    color: var(--color-primary);
+    font-family: var(--family-serif);
+    font-size: var(--font-size-4);
     padding-bottom: var(--spacing-4);
     border-bottom: 1px solid var(--color-secondary-1);
   }
@@ -29,15 +27,12 @@
     }
 
     h3 {
-      font-family: var(--family-serif);
-      font-weight: var(--font-weight-light);
-      font-size: var(--font-size-5);
-      font-style: italic;
+      font-size: var(--font-size-6);
       line-height: 1.1;
     }
 
     h4 {
-      font-size: var(--font-size-8);
+      font-size: var(--font-size-7);
     }
 
     a {
@@ -55,8 +50,8 @@
       padding-bottom: var(--spacing-2);
 
       &::marker {
-        color: var(--color-dark-trans);
-        font-size: 0.6rem;
+        // color: var(--color-dark-trans);
+        // font-size: 0.6rem;
       }
     }
   }
