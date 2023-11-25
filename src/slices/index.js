@@ -13,8 +13,10 @@ export const components = {
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
   quick_links: dynamic(() => import("./QuickLinks")),
+  quick_links: dynamic(() => import("./QuickLinks")),
   quote: dynamic(() => import("./Quote")),
   text: dynamic(() => import("./Text")),
+  text_with_cards: dynamic(() => import("./TextWithCards")),
   text_with_image: dynamic(() => import("./TextWithImage")),
   treatment_list: dynamic(() => import("./TreatmentList")),
 };

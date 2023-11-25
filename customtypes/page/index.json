@@ -36,7 +36,8 @@
             "hero": { "type": "SharedSlice" },
             "card": { "type": "SharedSlice" },
             "quick_links": { "type": "SharedSlice" },
-            "text_with_image": { "type": "SharedSlice" }
+            "text_with_image": { "type": "SharedSlice" },
+            "text_with_cards": { "type": "SharedSlice" }
           }
         }
       }

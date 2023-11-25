@@ -473,7 +473,8 @@ type PageDocumentDataSlicesSlice =
   | HeroSlice
   | CardSlice
   | QuickLinksSlice
-  | TextWithImageSlice;
+  | TextWithImageSlice
+  | TextWithCardsSlice;
 
 /**
  * Content for Page documents
@@ -675,7 +676,8 @@ type TreatmentDocumentDataSlicesSlice =
   | TextSlice
   | TextWithImageSlice
   | ImageSlice
-  | BookAppointmentSlice;
+  | BookAppointmentSlice
+  | TextWithCardsSlice;
 
 /**
  * Content for Treatment documents
@@ -1645,6 +1647,76 @@ export type QuickLinksSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *QuickLinks → Primary*
+ */
+export interface QuickLinksSliceDefaultPrimary {
+  /**
+   * title field in *QuickLinks → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quick_links.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *QuickLinks → Items*
+ */
+export interface QuickLinksSliceDefaultItem {
+  /**
+   * link field in *QuickLinks → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Link to a Treatment or any other Page
+   * - **API ID Path**: quick_links.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * label field in *QuickLinks → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quick_links.items[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for QuickLinks Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type QuickLinksSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<QuickLinksSliceDefaultPrimary>,
+  Simplify<QuickLinksSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *QuickLinks*
+ */
+type QuickLinksSliceVariation = QuickLinksSliceDefault;
+
+/**
+ * QuickLinks Shared Slice
+ *
+ * - **API ID**: `quick_links`
+ * - **Description**: QuickLinks
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type QuickLinksSlice = prismic.SharedSlice<
+  "quick_links",
+  QuickLinksSliceVariation
+>;
+
+/**
  * Primary content in *Quote → Primary*
  */
 export interface QuoteSliceDefaultPrimary {
@@ -1737,6 +1809,76 @@ type TextSliceVariation = TextSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
+
+/**
+ * Primary content in *TextWithCards → Primary*
+ */
+export interface TextWithCardsSliceDefaultPrimary {
+  /**
+   * Text field in *TextWithCards → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_cards.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *TextWithCards → Items*
+ */
+export interface TextWithCardsSliceDefaultItem {
+  /**
+   * title field in *TextWithCards → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_cards.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Icon field in *TextWithCards → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_with_cards.items[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for TextWithCards Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithCardsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextWithCardsSliceDefaultPrimary>,
+  Simplify<TextWithCardsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *TextWithCards*
+ */
+type TextWithCardsSliceVariation = TextWithCardsSliceDefault;
+
+/**
+ * TextWithCards Shared Slice
+ *
+ * - **API ID**: `text_with_cards`
+ * - **Description**: TextWithCards
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithCardsSlice = prismic.SharedSlice<
+  "text_with_cards",
+  TextWithCardsSliceVariation
+>;
 
 /**
  * Primary content in *TextWithImage → Primary*
@@ -2015,12 +2157,18 @@ declare module "@prismicio/client" {
       QuickLinksSlice,
       QuickLinksSliceVariation,
       QuickLinksSliceDefault,
+      QuickLinksSlice,
+      QuickLinksSliceVariation,
+      QuickLinksSliceDefault,
       QuoteSlice,
       QuoteSliceVariation,
       QuoteSliceDefault,
       TextSlice,
       TextSliceVariation,
       TextSliceDefault,
+      TextWithCardsSlice,
+      TextWithCardsSliceVariation,
+      TextWithCardsSliceDefault,
       TextWithImageSlice,
       TextWithImageSliceVariation,
       TextWithImageSliceDefault,

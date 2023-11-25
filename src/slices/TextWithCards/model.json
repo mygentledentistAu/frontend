@@ -1,0 +1,41 @@
+{
+  "id": "text_with_cards",
+  "type": "SharedSlice",
+  "name": "TextWithCards",
+  "description": "TextWithCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "title", "placeholder": "" }
+        },
+        "icon": {
+          "type": "Image",
+          "config": {
+            "label": "Icon",
+            "constraint": { "width": null, "height": null },
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

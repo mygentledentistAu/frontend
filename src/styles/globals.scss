@@ -83,10 +83,16 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 14px;
   font-family: var(--family-sans);
   color: var(--color-neutral-2);
   line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -590,7 +596,8 @@ footer {
 .hero {
   width: 100%;
   position: relative;
-  background: var(--color-light-2);
+  background: var(--color-primary);
+  color: var(--color-light);
   min-height: 15rem;
 
   display: grid;
@@ -628,8 +635,6 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-    color: var(--color-secondary);
-    text-shadow: 0.02rem 0.02rem 0.2rem var(--color-light-2);
   }
 
   h3 {
@@ -652,14 +657,14 @@ footer {
 .hero-treatment {
   container-type: inline-size;
   color: var(--color-light);
-  background: var(--color-secondary);
+  background: var(--color-primary);
 
   .grid-wrap {
-    background: url("/tools.svg") no-repeat 98% center;
+    // background: url("/tools.svg") no-repeat 98% center;
   }
 
   h1 {
-    text-shadow: 0.25rem 0.25rem 1rem var(--color-secondary);
+    text-shadow: 0.25rem 0.25rem 1rem var(--color-primary);
   }
 
   .inner {
@@ -688,8 +693,7 @@ footer {
   .image {
     margin-top: var(--spacing-4);
     overflow: hidden;
-    border-radius: 0.5rem;
-    border-bottom-right-radius: 4rem;
+    border-radius: 0.25rem;
   }
 
   .richtext {
@@ -703,11 +707,13 @@ footer {
       gap: var(--spacing-4);
     }
 
+    .image {
+      border-radius: 0.5rem;
+    }
+
     &.text-image--left {
       .image {
         order: 1;
-        border-bottom-right-radius: 0.5rem;
-        border-bottom-left-radius: 6rem;
       }
 
       .text {
@@ -727,7 +733,7 @@ footer {
 
 .book-dialog {
   left: 50%;
-  top: 10%;
+  top: 50%;
   translate: -50% 0%;
   border: none;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -738,9 +744,6 @@ footer {
   width: 90%;
   max-width: 750px;
 
-  @media (min-width: 768px) {
-    top: 30%;
-  }
 
   &::backdrop {
     background: hsl(207deg 100% 20% / 60%);

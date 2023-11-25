@@ -49,7 +49,8 @@
             "text": { "type": "SharedSlice" },
             "text_with_image": { "type": "SharedSlice" },
             "image": { "type": "SharedSlice" },
-            "book_appointment": { "type": "SharedSlice" }
+            "book_appointment": { "type": "SharedSlice" },
+            "text_with_cards": { "type": "SharedSlice" }
           }
         }
       }
