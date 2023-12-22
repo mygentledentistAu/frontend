@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui deserunt voluptate aliquip ex in aliqua. Anim occaecat dolore proident."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "General treatments"
+						}
+					],
+					[
+						"subcontent",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Wisdom Tooth Surgery"
+						}
+					],
+					[
+						"subcontent2",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Gum Disease Treatment"
+						}
+					],
+					[
+						"subcontent3",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Dental Crown Bridge"
+						}
+					]
+				]
+			}
+		]
+	}
+]

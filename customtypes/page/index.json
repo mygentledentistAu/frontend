@@ -24,6 +24,8 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "new_treatment_list": { "type": "SharedSlice" },
+            "about_team": { "type": "SharedSlice" },
             "hero_video": { "type": "SharedSlice" },
             "image": { "type": "SharedSlice" },
             "quote": { "type": "SharedSlice" },
@@ -33,6 +35,7 @@
             "treatment_list": { "type": "SharedSlice" },
             "hero_home": { "type": "SharedSlice" },
             "employee_listing": { "type": "SharedSlice" },
+            "image_cards": { "type": "SharedSlice" },
             "hero": { "type": "SharedSlice" },
             "card": { "type": "SharedSlice" },
             "quick_links": { "type": "SharedSlice" },

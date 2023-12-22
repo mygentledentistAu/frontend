@@ -1,0 +1,45 @@
+{
+  "id": "new_treatment_list",
+  "type": "SharedSlice",
+  "name": "NewTreatmentList",
+  "description": "NewTreatmentList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        },
+        "subcontent": {
+          "type": "Text",
+          "config": { "label": "subcontent", "placeholder": "" }
+        },
+        "subcontent2": {
+          "type": "Text",
+          "config": { "label": "subcontent2", "placeholder": "" }
+        },
+        "subcontent3": {
+          "type": "Text",
+          "config": { "label": "subcontent3", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

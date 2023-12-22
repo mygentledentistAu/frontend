@@ -645,6 +645,8 @@ interface PageDocumentData {
  *
  */
 type PageDocumentDataSlicesSlice =
+  | NewTreatmentListSlice
+  | AboutTeamSlice
   | HeroVideoSlice
   | ImageSlice
   | QuoteSlice
@@ -654,6 +656,7 @@ type PageDocumentDataSlicesSlice =
   | TreatmentListSlice
   | HeroHomeSlice
   | EmployeeListingSlice
+  | ImageCardsSlice
   | HeroSlice
   | CardSlice
   | QuickLinksSlice
@@ -984,6 +987,127 @@ export type AllDocumentTypes =
   | SettingsDocument
   | TreatmentDocument;
 /**
+ * Primary content in *AboutTeam → Primary*
+ */
+export interface AboutTeamSliceDefaultPrimary {
+  /**
+   * Heading field in *AboutTeam → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+}
+
+/**
+ * Primary content in *AboutTeam → Items*
+ */
+export interface AboutTeamSliceDefaultItem {
+  /**
+   * Title field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Image field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Subtitle field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].subtitle
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitle: prismic.TitleField;
+
+  /**
+   * Content field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * TextOverlays field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].texto
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto: prismic.TitleField;
+
+  /**
+   * Link field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Icon field in *AboutTeam → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_team.items[].icon
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  icon: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for AboutTeam Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutTeamSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutTeamSliceDefaultPrimary>,
+  Simplify<AboutTeamSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *AboutTeam*
+ */
+type AboutTeamSliceVariation = AboutTeamSliceDefault;
+
+/**
+ * AboutTeam Shared Slice
+ *
+ * - **API ID**: `about_team`
+ * - **Description**: AboutTeam
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutTeamSlice = prismic.SharedSlice<
+  "about_team",
+  AboutTeamSliceVariation
+>;
+
+/**
+ * Primary content in *BookAppointment → Primary*
  * Primary content in AreasWeServe → Primary
  *
  */
@@ -3202,8 +3326,97 @@ export type ImageCardsSlice = prismic.SharedSlice<
   ImageCardsSliceVariation
 >;
 /**
- * Primary content in OurLocation → Primary
+ * Primary content in *NewTreatmentList → Primary*
+ */
+export interface NewTreatmentListSliceDefaultPrimary {
+  /**
+   * Heading field in *NewTreatmentList → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: new_treatment_list.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *NewTreatmentList → Items*
+ */
+export interface NewTreatmentListSliceDefaultItem {
+  /**
+   * Title field in *NewTreatmentList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: new_treatment_list.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * subcontent field in *NewTreatmentList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: new_treatment_list.items[].subcontent
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subcontent: prismic.KeyTextField;
+
+  /**
+   * subcontent2 field in *NewTreatmentList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: new_treatment_list.items[].subcontent2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subcontent2: prismic.KeyTextField;
+
+  /**
+   * subcontent3 field in *NewTreatmentList → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: new_treatment_list.items[].subcontent3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subcontent3: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for NewTreatmentList Slice
  *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewTreatmentListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<NewTreatmentListSliceDefaultPrimary>,
+  Simplify<NewTreatmentListSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *NewTreatmentList*
+ */
+type NewTreatmentListSliceVariation = NewTreatmentListSliceDefault;
+
+/**
+ * NewTreatmentList Shared Slice
+ *
+ * - **API ID**: `new_treatment_list`
+ * - **Description**: NewTreatmentList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type NewTreatmentListSlice = prismic.SharedSlice<
+  "new_treatment_list",
+  NewTreatmentListSliceVariation
+>;
+
+/**
+ * Primary content in *QuickLinks → Primary*
  */
 interface OurLocationSliceDefaultPrimary {
   /**
@@ -4756,13 +4969,17 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
   namespace Content {
     export type {
       ArticleDocumentData,
       ArticleDocumentDataSlicesSlice,
+      EmployeeDocument,
+      EmployeeDocumentData,
+      EmployeeDocumentDataSlicesSlice,
+      FooterDocument,
       ArticleDocument,
       BlogpostsDocumentData,
       BlogpostsDocumentDataSlicesSlice,
@@ -4774,6 +4991,33 @@ declare module "@prismicio/client" {
       FooterDocumentDataLinkGroup1Item,
       FooterDocumentDataLinkGroup2Item,
       FooterDocumentDataLinkGroup3Item,
+      NavigationDocument,
+      NavigationDocumentData,
+      NavigationDocumentDataLinksItem,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      SettingsDocument,
+      SettingsDocumentData,
+      SettingsDocumentDataLocationsItem,
+      SettingsDocumentDataBookingDialogItem,
+      TreatmentDocument,
+      TreatmentDocumentData,
+      TreatmentDocumentDataSlicesSlice,
+      AllDocumentTypes,
+      AboutTeamSlice,
+      AboutTeamSliceDefaultPrimary,
+      AboutTeamSliceDefaultItem,
+      AboutTeamSliceVariation,
+      AboutTeamSliceDefault,
+      BookAppointmentSlice,
+      BookAppointmentSliceDefaultPrimary,
+      BookAppointmentSliceDefaultItem,
+      BookAppointmentSliceVariation,
+      BookAppointmentSliceDefault,
+      CardSlice,
+      CardSliceDefaultPrimary,
+      CardSliceVariation,
       FooterDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
@@ -4820,6 +5064,27 @@ declare module "@prismicio/client" {
       CommonHeadingSectionSliceVariation,
       CommonHeadingSectionSlice,
       ContactFormSliceDefault,
+      EmployeeListingSlice,
+      EmployeeListingSliceDefaultPrimary,
+      EmployeeListingSliceVariation,
+      EmployeeListingSliceDefault,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceVariation,
+      HeroSliceDefault,
+      HeroHomeSlice,
+      HeroHomeSliceDefaultPrimary,
+      HeroHomeSliceVariation,
+      HeroHomeSliceDefault,
+      HeroVideoSlice,
+      HeroVideoSliceDefaultPrimary,
+      HeroVideoSliceDefaultItem,
+      HeroVideoSliceVariation,
+      HeroVideoSliceDefault,
+      ImageSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceWidePrimary,
+      ImageSliceVariation,
       ContactFormSliceVariation,
       ContactFormSlice,
       DoctorTeamCardSliceDefaultPrimary,
@@ -4887,6 +5152,43 @@ declare module "@prismicio/client" {
       ImageSliceDefault,
       ImageSliceWidePrimary,
       ImageSliceWide,
+      ImageCardsSlice,
+      ImageCardsSliceDefaultPrimary,
+      ImageCardsSliceDefaultItem,
+      ImageCardsSliceVariation,
+      ImageCardsSliceDefault,
+      NewTreatmentListSlice,
+      NewTreatmentListSliceDefaultPrimary,
+      NewTreatmentListSliceDefaultItem,
+      NewTreatmentListSliceVariation,
+      NewTreatmentListSliceDefault,
+      QuickLinksSlice,
+      QuickLinksSliceDefaultPrimary,
+      QuickLinksSliceDefaultItem,
+      QuickLinksSliceVariation,
+      QuickLinksSliceDefault,
+      QuickLinksSlice,
+      QuickLinksSliceDefaultPrimary,
+      QuickLinksSliceDefaultItem,
+      QuickLinksSliceVariation,
+      QuickLinksSliceDefault,
+      QuoteSlice,
+      QuoteSliceDefaultPrimary,
+      QuoteSliceVariation,
+      QuoteSliceDefault,
+      TextSlice,
+      TextSliceDefaultPrimary,
+      TextSliceVariation,
+      TextSliceDefault,
+      TextWithCardsSlice,
+      TextWithCardsSliceDefaultPrimary,
+      TextWithCardsSliceDefaultItem,
+      TextWithCardsSliceVariation,
+      TextWithCardsSliceDefault,
+      TextWithImageSlice,
+      TextWithImageSliceDefaultPrimary,
+      TextWithImageSliceWithButtonPrimary,
+      TextWithImageSliceVariation,
       ImageSliceVariation,
       ImageSlice,
       ImageCardsSliceDefaultPrimary,
@@ -4942,6 +5244,9 @@ declare module "@prismicio/client" {
       TextWithImageSliceDefault,
       TextWithImageSliceWithButtonPrimary,
       TextWithImageSliceWithButton,
+      TreatmentListSlice,
+      TreatmentListSliceDefaultPrimary,
+      TreatmentListSliceVariation,
       TextWithImageSliceVariation,
       TextWithImageSlice,
       TreamentPricingSliceDefaultPrimary,

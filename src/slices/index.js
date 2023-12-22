@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_team: dynamic(() => import("./AboutTeam")),
   areas_we_serve: dynamic(() => import("./AreasWeServe")),
   book_appointment: dynamic(() => import("./BookAppointment")),
   callto_action: dynamic(() => import("./CalltoAction")),
@@ -21,6 +22,7 @@ export const components = {
   howto_assist_you: dynamic(() => import("./HowtoAssistYou")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
+  new_treatment_list: dynamic(() => import("./NewTreatmentList")),
   our_location: dynamic(() => import("./OurLocation")),
   our_services: dynamic(() => import("./OurServices")),
   patient_feed_carousel: dynamic(() => import("./PatientFeedCarousel")),
