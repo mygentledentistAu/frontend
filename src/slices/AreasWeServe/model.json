@@ -11,7 +11,20 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {},
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "some_text": {
+          "type": "Text",
+          "config": { "label": "Some Text", "placeholder": "" }
+        }
+      },
       "items": {
         "city": {
           "type": "Text",

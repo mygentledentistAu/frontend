@@ -29,7 +29,7 @@ const HowtoAssistYou = ({ slice }) => {
       <div key={index} className="max-w-sm  text-center  bg-transparent transform hover:scale-105 transition duration-500">
          <PrismicNextImage field={item.image} className=" w-36 h-36 bg-center rounded-full object-cover mx-auto"  />
          <p className="mt-4">
-         <PrismicNextLink   field={item.link} className=" text-xl hover:underline hover:transition duration-300">
+         <PrismicNextLink   field={item.link} className=" text-xl hover:no-underline hover:transition duration-300">
         {item.link_text}
         </PrismicNextLink>
          </p>

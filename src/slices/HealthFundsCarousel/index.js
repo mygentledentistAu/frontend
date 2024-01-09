@@ -6,12 +6,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
  * @typedef {import("@prismicio/react").SliceComponentProps<HealthFundsCarouselSlice>} HealthFundsCarouselProps
  * @param {HealthFundsCarouselProps}
  */
-import {Autoplay} from 'swiper/modules';
+import {Autoplay, Navigation} from 'swiper/modules';
 // import 'swiper/css';
+// import 'swiper/css/navigation';
 
 const HealthFundsCarousel = ({ slice }) => {
   return (
-    <section
+    <section className="bg-blue-100/40"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -24,12 +25,14 @@ const HealthFundsCarousel = ({ slice }) => {
  </h2>
  <h2 className="text-center text-xl md:text-2xl">{slice.primary.sub_heading}</h2>
 </div>
-<Swiper
+    <Swiper
       centeredSlides={true}
+      spaceBetween={0}
         autoplay = {{
           delay:2000
         }}
         loop={true}
+        navigation={true}
         pagination={{
           clickable: true,
         }}
@@ -52,12 +55,13 @@ const HealthFundsCarousel = ({ slice }) => {
         }}
         modules={[Autoplay]}
         className="mySwiper"
-        style={{width:"100%",height:"10%"}}
+        style={{width:"100%",height:"10%",padding:"0 30px"}}
       >
         
        {slice.items.map((item, index)=>(
-        <SwiperSlide  key={index} style={{width:"100%",height:"100%"}} >
-            <PrismicNextImage field={item.image} style={{width:"200px",height:"150px",objectFit:"cover",display:"block"}} />
+        <SwiperSlide  key={index} style={{width:"100%",height:"100%",padding:"0 30px"}} >
+            <PrismicNextImage field={item.image} style={{width:"200px",maxHeight:"100px",objectFit:"cover",
+            display:"block",minHeight:"100px"}} />
           </SwiperSlide>
        ))} 
        

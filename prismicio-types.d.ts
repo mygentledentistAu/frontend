@@ -825,6 +825,42 @@ export type AllDocumentTypes =
   | SettingsDocument
   | TreatmentDocument;
 /**
+ * Primary content in AreasWeServe → Primary
+ *
+ */
+interface AreasWeServeSliceDefaultPrimary {
+  /**
+   * Heading field in *AreasWeServe → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: areas_we_serve.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *AreasWeServe → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: areas_we_serve.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+  /**
+   * Some Text field in *AreasWeServe → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: areas_we_serve.primary.some_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  some_text: prismic.KeyTextField;
+}
+/**
  * Item in AreasWeServe → Items
  *
  */
@@ -890,7 +926,7 @@ export interface AreasWeServeSliceDefaultItem {
  */
 export type AreasWeServeSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<AreasWeServeSliceDefaultPrimary>,
   Simplify<AreasWeServeSliceDefaultItem>
 >;
 /**
@@ -3779,6 +3815,7 @@ declare module "@prismicio/client" {
       TreatmentDocumentDataSlicesSlice,
       TreatmentDocument,
       AllDocumentTypes,
+      AreasWeServeSliceDefaultPrimary,
       AreasWeServeSliceDefaultItem,
       AreasWeServeSliceDefault,
       AreasWeServeSliceVariation,
