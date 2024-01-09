@@ -1,0 +1,35 @@
+{
+  "id": "home_callto_action",
+  "type": "SharedSlice",
+  "name": "HomeCalltoAction",
+  "description": "HomeCalltoAction",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "body_text": {
+          "type": "Text",
+          "config": { "label": "Body Text", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

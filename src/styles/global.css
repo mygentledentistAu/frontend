@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hero video starts
+.hero_container{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero_container .video_container
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.hero_container .video_container iframe {
+  width: 100%!important;
+  height: 100%!important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero_container .body_container
+{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+ */
+
+
+
+
+
+
+ /* Adjust padding-top for smaller screens */
+ 
+
+
+/* Hero video ends */
+
+
+
+
+
+
+  /* carousel 1 starts */
+/*   
+  #brand_img_slider {
+    width: 100%;
+    height: 10%;
+    padding:2rem;
+    overflow: hidden;
+  }
+  
+  #brand_img_slider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .swiper-slide img {
+    display: block; 
+     object-fit: cover;
+     width: 300px;
+     height: 200px;
+
+  }  */
+
+  /* carousel 1 ends */
+
+  /* carousel 2 starts */
+
+   /* .swiper {
+    width: 100%;
+    height: 100%;
+    padding:2rem;
+
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 500px;
+    padding:1rem;
+
+  }
+  
+  .swiper-slide img {
+    display: block;
+    object-fit: cover; 
+  } */
+  /* carousel 2 ends */
+
+
+   /* carousel 3 starts */
+
+   /* .swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 400px!important;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-grid-column > .swiper-wrapper {
+    flex-wrap: wrap;
+    flex-direction: row!important;
+}
+
+ */
+
+    /* carousel 3 ends */
+
+
+    /* carousel 4 starts */
+
+
+
+
+    
+    /* carousel 4 ends */
+
+
+
+  

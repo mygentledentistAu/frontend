@@ -1,0 +1,76 @@
+{
+  "id": "treament_pricing",
+  "type": "SharedSlice",
+  "name": "TreamentPricing",
+  "description": "TreamentPricing",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "some_text": {
+          "type": "Text",
+          "config": { "label": "Some Text", "placeholder": "" }
+        },
+        "call_us": {
+          "type": "Text",
+          "config": { "label": "Call Us", "placeholder": "" }
+        }
+      },
+      "items": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "price": {
+          "type": "Text",
+          "config": { "label": "Price", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "feature_1": {
+          "type": "Text",
+          "config": { "label": "Feature 1", "placeholder": "" }
+        },
+        "feature_2": {
+          "type": "Text",
+          "config": { "label": "Feature 2", "placeholder": "" }
+        },
+        "feature_3": {
+          "type": "Text",
+          "config": { "label": "Feature 3", "placeholder": "" }
+        },
+        "feature_4": {
+          "type": "Text",
+          "config": { "label": "Feature 4", "placeholder": "" }
+        },
+        "duration": {
+          "type": "Text",
+          "config": { "label": "duration", "placeholder": "month/year" }
+        },
+        "money_saved": {
+          "type": "Text",
+          "config": { "label": "Money saved", "placeholder": "" }
+        },
+        "tag": {
+          "type": "Text",
+          "config": { "label": "Tag", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

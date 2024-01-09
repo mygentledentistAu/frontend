@@ -1,0 +1,27 @@
+{
+  "id": "common_heading_section",
+  "type": "SharedSlice",
+  "name": "CommonHeadingSection",
+  "description": "CommonHeadingSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "howto_assist_you",
+  "type": "SharedSlice",
+  "name": "HowtoAssistYou",
+  "description": "HowtoAssistYou",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        }
+      }
+    },
+    {
+      "id": "diagonal",
+      "name": "Diagonal",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

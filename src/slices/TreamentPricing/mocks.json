@@ -1,0 +1,115 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "hurry",
+				"type": "Text"
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "pain",
+				"type": "Text"
+			},
+			"some_text": {
+				"__TYPE__": "FieldContent",
+				"value": "prepare",
+				"type": "Text"
+			},
+			"call_us": {
+				"__TYPE__": "FieldContent",
+				"value": "extra",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "hard",
+							"type": "Text"
+						}
+					],
+					[
+						"price",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "broken",
+							"type": "Text"
+						}
+					],
+					[
+						"sub_heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "determine",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_1",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "spread",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_2",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "thread",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_3",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "driving",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_4",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "helpful",
+							"type": "Text"
+						}
+					],
+					[
+						"duration",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "parallel",
+							"type": "Text"
+						}
+					],
+					[
+						"money_saved",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "through",
+							"type": "Text"
+						}
+					],
+					[
+						"tag",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "occasionally",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

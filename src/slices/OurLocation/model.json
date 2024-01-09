@@ -1,0 +1,105 @@
+{
+  "id": "our_location",
+  "type": "SharedSlice",
+  "name": "OurLocation",
+  "description": "OurLocation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "main_heading": {
+          "type": "Text",
+          "config": { "label": "Main Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "address": {
+          "type": "Text",
+          "config": { "label": "Address", "placeholder": "" }
+        },
+        "email": {
+          "type": "Text",
+          "config": { "label": "Email", "placeholder": "" }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "twoColumn",
+      "name": "TwoColumn",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "main_heading": {
+          "type": "Text",
+          "config": { "label": "Main Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "address": {
+          "type": "Text",
+          "config": { "label": "Address", "placeholder": "" }
+        },
+        "email": {
+          "type": "Text",
+          "config": { "label": "Email", "placeholder": "" }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "forContactusPage",
+      "name": "ForContactusPage",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "main_heading": {
+          "type": "Text",
+          "config": { "label": "Main Heading", "placeholder": "" }
+        },
+        "randomtext": {
+          "type": "Text",
+          "config": { "label": "RandomText", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "address": {
+          "type": "Text",
+          "config": { "label": "Address", "placeholder": "" }
+        },
+        "email": {
+          "type": "Text",
+          "config": { "label": "Email", "placeholder": "" }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

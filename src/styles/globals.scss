@@ -277,7 +277,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 100;
   height: var(--header-height);
   border-bottom: 12px solid var(--color-primary);
   background: var(--color-light);

@@ -1,0 +1,54 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"city",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "answer",
+							"type": "Text"
+						}
+					],
+					[
+						"address",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "coming",
+							"type": "Text"
+						}
+					],
+					[
+						"phone_no",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "improve",
+							"type": "Text"
+						}
+					],
+					[
+						"map_latitude",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "actually",
+							"type": "Text"
+						}
+					],
+					[
+						"map_longitude",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "come",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

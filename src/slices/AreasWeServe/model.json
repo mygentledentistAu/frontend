@@ -1,0 +1,39 @@
+{
+  "id": "areas_we_serve",
+  "type": "SharedSlice",
+  "name": "AreasWeServe",
+  "description": "AreasWeServe",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "city": {
+          "type": "Text",
+          "config": { "label": "City Name", "placeholder": "" }
+        },
+        "address": {
+          "type": "Text",
+          "config": { "label": "Address", "placeholder": "" }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        },
+        "map_latitude": {
+          "type": "Text",
+          "config": { "label": "Map Latitude", "placeholder": "" }
+        },
+        "map_longitude": {
+          "type": "Text",
+          "config": { "label": "Map Longitude", "placeholder": "" }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "doctor_team_card",
+  "type": "SharedSlice",
+  "name": "DoctorTeamCard",
+  "description": "DoctorTeamCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "name": {
+          "type": "Text",
+          "config": { "label": "Name", "placeholder": "" }
+        },
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        },
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        },
+        "facebook_link": {
+          "type": "Link",
+          "config": {
+            "label": "Facebook Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "instagram_link": {
+          "type": "Link",
+          "config": {
+            "label": "Instagram Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "twitter_link": {
+          "type": "Link",
+          "config": {
+            "label": "Twitter Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    },
+    {
+      "id": "secondHover",
+      "name": "SecondHover",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "name": {
+          "type": "Text",
+          "config": { "label": "Name", "placeholder": "" }
+        },
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        },
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        },
+        "facebook_link": {
+          "type": "Link",
+          "config": {
+            "label": "Facebook Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "instagram_link": {
+          "type": "Link",
+          "config": {
+            "label": "Instagram Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "twitter_link": {
+          "type": "Link",
+          "config": {
+            "label": "Twitter Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
