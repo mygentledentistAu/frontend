@@ -10,6 +10,7 @@ export const components = {
   contact_form: dynamic(() => import("./ContactForm")),
   doctor_team_card: dynamic(() => import("./DoctorTeamCard")),
   employee_listing: dynamic(() => import("./EmployeeListing")),
+  faqs: dynamic(() => import("./Faqs")),
   health_funds_carousel: dynamic(() => import("./HealthFundsCarousel")),
   hero: dynamic(() => import("./Hero")),
   hero_home: dynamic(() => import("./HeroHome")),
