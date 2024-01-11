@@ -191,3 +191,20 @@
     }
   }  
 }
+
+.callLink
+{
+  text-decoration: none;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 20px;
+      background:linear-gradient(to left, #a55eea, #45aaf2);
+      margin-top: 20px;
+      transition: all .3s ease;
+
+}
+.callLink:hover
+{
+  text-decoration: none;
+  transform:translateY(-8px)
+}

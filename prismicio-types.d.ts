@@ -670,7 +670,8 @@ type PageDocumentDataSlicesSlice =
   | DoctorTeamCardSlice
   | CommonHeadingSectionSlice
   | TreamentPricingSlice
-  | FaqsSlice;
+  | FaqsSlice
+  | CalltoActionSlice;
 /**
  * Page document from Prismic
  *
@@ -1194,6 +1195,323 @@ type BookAppointmentSliceVariation = BookAppointmentSliceDefault;
 export type BookAppointmentSlice = prismic.SharedSlice<
   "book_appointment",
   BookAppointmentSliceVariation
+>;
+/**
+ * Primary content in CalltoAction → Primary
+ *
+ */
+interface CalltoActionSliceDefaultPrimary {
+  /**
+   * Heading field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Description field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismic.KeyTextField;
+  /**
+   * Image field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Phone No field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.phone_no
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_no: prismic.KeyTextField;
+}
+/**
+ * Default variation for CalltoAction Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CalltoActionSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Primary content in CalltoAction → Primary
+ *
+ */
+interface CalltoActionSliceVar1Primary {
+  /**
+   * Heading field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Description field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismic.KeyTextField;
+  /**
+   * Image field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Phone No field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.phone_no
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_no: prismic.KeyTextField;
+}
+/**
+ * var1 variation for CalltoAction Slice
+ *
+ * - **API ID**: `var1`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSliceVar1 = prismic.SharedSliceVariation<
+  "var1",
+  Simplify<CalltoActionSliceVar1Primary>,
+  never
+>;
+/**
+ * Primary content in CalltoAction → Primary
+ *
+ */
+interface CalltoActionSliceVar2Primary {
+  /**
+   * Heading field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Description field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismic.KeyTextField;
+  /**
+   * Image field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Phone No field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.phone_no
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_no: prismic.KeyTextField;
+}
+/**
+ * var2 variation for CalltoAction Slice
+ *
+ * - **API ID**: `var2`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSliceVar2 = prismic.SharedSliceVariation<
+  "var2",
+  Simplify<CalltoActionSliceVar2Primary>,
+  never
+>;
+/**
+ * Primary content in CalltoAction → Primary
+ *
+ */
+interface CalltoActionSliceVar3Primary {
+  /**
+   * Heading field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Description field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismic.KeyTextField;
+  /**
+   * Image field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Phone No field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.phone_no
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_no: prismic.KeyTextField;
+}
+/**
+ * var3 variation for CalltoAction Slice
+ *
+ * - **API ID**: `var3`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSliceVar3 = prismic.SharedSliceVariation<
+  "var3",
+  Simplify<CalltoActionSliceVar3Primary>,
+  never
+>;
+/**
+ * Primary content in CalltoAction → Primary
+ *
+ */
+interface CalltoActionSliceVar4Primary {
+  /**
+   * Heading field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Description field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  description: prismic.KeyTextField;
+  /**
+   * Image field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+  /**
+   * Phone No field in *CalltoAction → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: callto_action.primary.phone_no
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  phone_no: prismic.KeyTextField;
+}
+/**
+ * var4 variation for CalltoAction Slice
+ *
+ * - **API ID**: `var4`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSliceVar4 = prismic.SharedSliceVariation<
+  "var4",
+  Simplify<CalltoActionSliceVar4Primary>,
+  never
+>;
+/**
+ * Slice variation for *CalltoAction*
+ *
+ */
+type CalltoActionSliceVariation =
+  | CalltoActionSliceDefault
+  | CalltoActionSliceVar1
+  | CalltoActionSliceVar2
+  | CalltoActionSliceVar3
+  | CalltoActionSliceVar4;
+/**
+ * CalltoAction Shared Slice
+ *
+ * - **API ID**: `callto_action`
+ * - **Description**: `CalltoAction`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CalltoActionSlice = prismic.SharedSlice<
+  "callto_action",
+  CalltoActionSliceVariation
 >;
 /**
  * Primary content in WideCard → Primary
@@ -3891,16 +4209,6 @@ export interface TreamentPricingSliceDefaultItem {
    */
   duration: prismic.KeyTextField;
   /**
-   * Money saved field in *TreamentPricing → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: treament_pricing.items[].money_saved
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  money_saved: prismic.KeyTextField;
-  /**
    * Tag field in *TreamentPricing → Items*
    *
    * - **Field Type**: Text
@@ -3925,10 +4233,167 @@ export type TreamentPricingSliceDefault = prismic.SharedSliceVariation<
   Simplify<TreamentPricingSliceDefaultItem>
 >;
 /**
+ * Primary content in TreamentPricing → Primary
+ *
+ */
+interface TreamentPricingSliceVar1Primary {
+  /**
+   * Heading field in *TreamentPricing → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *TreamentPricing → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+  /**
+   * Some Text field in *TreamentPricing → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.primary.some_text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  some_text: prismic.KeyTextField;
+  /**
+   * Call Us field in *TreamentPricing → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.primary.call_us
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  call_us: prismic.KeyTextField;
+}
+/**
+ * Item in TreamentPricing → Items
+ *
+ */
+export interface TreamentPricingSliceVar1Item {
+  /**
+   * Heading field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Price field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].price
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  price: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+  /**
+   * Feature 1 field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].feature_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  feature_1: prismic.KeyTextField;
+  /**
+   * Feature 2 field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].feature_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  feature_2: prismic.KeyTextField;
+  /**
+   * Feature 3 field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].feature_3
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  feature_3: prismic.KeyTextField;
+  /**
+   * Feature 4 field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].feature_4
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  feature_4: prismic.KeyTextField;
+  /**
+   * duration field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: month/year
+   * - **API ID Path**: treament_pricing.items[].duration
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  duration: prismic.KeyTextField;
+  /**
+   * Tag field in *TreamentPricing → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: treament_pricing.items[].tag
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  tag: prismic.KeyTextField;
+}
+/**
+ * var1 variation for TreamentPricing Slice
+ *
+ * - **API ID**: `var1`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TreamentPricingSliceVar1 = prismic.SharedSliceVariation<
+  "var1",
+  Simplify<TreamentPricingSliceVar1Primary>,
+  Simplify<TreamentPricingSliceVar1Item>
+>;
+/**
  * Slice variation for *TreamentPricing*
  *
  */
-type TreamentPricingSliceVariation = TreamentPricingSliceDefault;
+type TreamentPricingSliceVariation =
+  | TreamentPricingSliceDefault
+  | TreamentPricingSliceVar1;
 /**
  * TreamentPricing Shared Slice
  *
@@ -4064,6 +4529,18 @@ declare module "@prismicio/client" {
       BookAppointmentSliceDefault,
       BookAppointmentSliceVariation,
       BookAppointmentSlice,
+      CalltoActionSliceDefaultPrimary,
+      CalltoActionSliceDefault,
+      CalltoActionSliceVar1Primary,
+      CalltoActionSliceVar1,
+      CalltoActionSliceVar2Primary,
+      CalltoActionSliceVar2,
+      CalltoActionSliceVar3Primary,
+      CalltoActionSliceVar3,
+      CalltoActionSliceVar4Primary,
+      CalltoActionSliceVar4,
+      CalltoActionSliceVariation,
+      CalltoActionSlice,
       CardSliceDefaultPrimary,
       CardSliceDefault,
       CardSliceVariation,
@@ -4194,6 +4671,9 @@ declare module "@prismicio/client" {
       TreamentPricingSliceDefaultPrimary,
       TreamentPricingSliceDefaultItem,
       TreamentPricingSliceDefault,
+      TreamentPricingSliceVar1Primary,
+      TreamentPricingSliceVar1Item,
+      TreamentPricingSliceVar1,
       TreamentPricingSliceVariation,
       TreamentPricingSlice,
       TreatmentListSliceDefaultPrimary,

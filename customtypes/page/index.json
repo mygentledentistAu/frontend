@@ -49,7 +49,8 @@
             "doctor_team_card": { "type": "SharedSlice" },
             "common_heading_section": { "type": "SharedSlice" },
             "treament_pricing": { "type": "SharedSlice" },
-            "faqs": { "type": "SharedSlice" }
+            "faqs": { "type": "SharedSlice" },
+            "callto_action": { "type": "SharedSlice" }
           }
         }
       }

@@ -93,10 +93,107 @@
 						}
 					],
 					[
-						"money_saved",
+						"tag",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "through",
+							"value": "occasionally",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "var1",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "wait",
+				"type": "Text"
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "can",
+				"type": "Text"
+			},
+			"some_text": {
+				"__TYPE__": "FieldContent",
+				"value": "declared",
+				"type": "Text"
+			},
+			"call_us": {
+				"__TYPE__": "FieldContent",
+				"value": "symbol",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "west",
+							"type": "Text"
+						}
+					],
+					[
+						"price",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "quite",
+							"type": "Text"
+						}
+					],
+					[
+						"sub_heading",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "above",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_1",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "accept",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_2",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "according",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_3",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "general",
+							"type": "Text"
+						}
+					],
+					[
+						"feature_4",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "moon",
+							"type": "Text"
+						}
+					],
+					[
+						"duration",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "rain",
 							"type": "Text"
 						}
 					],
@@ -104,7 +201,7 @@
 						"tag",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "occasionally",
+							"value": "behavior",
 							"type": "Text"
 						}
 					]

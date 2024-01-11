@@ -1,0 +1,143 @@
+{
+  "id": "callto_action",
+  "type": "SharedSlice",
+  "name": "CalltoAction",
+  "description": "CalltoAction",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "Text",
+          "config": { "label": "Description", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "var1",
+      "name": "var1",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "Text",
+          "config": { "label": "Description", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "var2",
+      "name": "var2",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "Text",
+          "config": { "label": "Description", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "var3",
+      "name": "var3",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "Text",
+          "config": { "label": "Description", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "var4",
+      "name": "var4",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "description": {
+          "type": "Text",
+          "config": { "label": "Description", "placeholder": "" }
+        },
+        "image": {
+          "type": "Image",
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        },
+        "phone_no": {
+          "type": "Text",
+          "config": { "label": "Phone No", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
