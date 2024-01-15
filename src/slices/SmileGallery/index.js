@@ -39,7 +39,7 @@ const SmileGallery = ({ slice }) => {
             <div className={gal.gallery}>
               {slice.items.map((item, index) => (
                 <PrismicNextImage key={index} field={item.image} 
-                style={{ filter: randomImageIndex === index ? 'none' : 'opacity(10%)' }}
+                style={{ filter: randomImageIndex === index ? 'none' : 'grayscale(100%)' }}
              />
               ))}
             </div>
@@ -60,7 +60,7 @@ const SmileGallery = ({ slice }) => {
     <div className={gal1.gallery}>
       {slice.items.map((item, index) => (
         <PrismicNextImage key={index} field={item.image}
-        style={{ filter: randomImageIndex === index ? 'none' : 'opacity(10%)' }}
+        style={{ filter: randomImageIndex === index ? 'none' : 'grayscale(100%)' }}
         />
       ))}
     </div>

@@ -51,13 +51,13 @@
 
 
   .gallery  > img {
-    width: 150px;
-    height: 150px;
-    margin: 5px;
+    width: 350px;
+    height: 450px;
+    /* margin: 5px; */
     object-fit:cover;
     display: block;
     transition-duration: 1s;
-    filter: opacity(10%);
+    filter: grayscale(100%);
 }
 
 .gallery img:hover {
