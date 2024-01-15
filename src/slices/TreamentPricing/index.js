@@ -17,7 +17,6 @@ const TreamentPricing = ({ slice }) => {
   <div className={st.container}>  
   {slice.items.map((item, index)=>(
     <div key={index} className={st.column}>
-    
       <div className={`${st.pricingcard} ${st.pro}`}>
         <div className={st.popular}>{item.tag}</div>
         <div className={st.pricingheader}>
@@ -67,7 +66,7 @@ const TreamentPricing = ({ slice }) => {
      >
     <div class="grid lg:grid-cols-3 px-8 py-8 gap-10 text-zinc-800 mt-10">
     {slice.items.map((item, index)=>(
-    <div class="flex flex-col items-center bg-gradient-to-br from-blue-300 via-white  to-blue-200 p-8 rounded-lg shadow-lg relative border-4 border-blue-400 max-w-sm">
+    <div key={index} class="flex flex-col items-center bg-gradient-to-br from-blue-300 via-white  to-blue-200 p-8 rounded-lg shadow-lg relative border-4 border-blue-400 max-w-sm">
         <p class="mono text-md absolute -top-4 bg-red-400 text-zinc-100 py-0.5 p-8  font-bold tracking-wider rounded">
             {item.tag}
         </p>
