@@ -45,17 +45,19 @@
     flex-direction: column;
     padding: 2rem 0;
     position: relative;
+    background-color: black;
   }
 
 
 
   .gallery  > img {
-    width: 450px;
-    height: 350px;
+    width: 150px;
+    height: 150px;
     margin: 5px;
     object-fit:cover;
     display: block;
     transition-duration: 1s;
+    filter: opacity(10%);
 }
 
 .gallery img:hover {

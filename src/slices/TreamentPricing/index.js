@@ -16,7 +16,7 @@ const TreamentPricing = ({ slice }) => {
   <div className="w-full py-8 px-8 md:px-16 ">
   <div className={st.container}>  
   {slice.items.map((item, index)=>(
-    <div className={st.column}>
+    <div key={index} className={st.column}>
     
       <div className={`${st.pricingcard} ${st.pro}`}>
         <div className={st.popular}>{item.tag}</div>

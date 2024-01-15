@@ -24,7 +24,7 @@ const DoctorTeamCard = ({ slice }) => {
           <div className=" flex justify-center items-center p-8">
             <div className="md:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 space-y-4 md:space-y-0">
               {slice.items.map((item, index) => (
-                <div className={st.doctorgrid}>
+                <div key={index} className={st.doctorgrid}>
                   <div className={st.doctorimage}>
                     {/* <a href="#" className={st.image}> */}
                     <PrismicNextImage field={item.image}  className={st.image}/>
