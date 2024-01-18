@@ -13,10 +13,10 @@ const HowtoAssistYou = ({ slice }) => {
    data-slice-variation={slice.variation}
    >
  
- <div className="bg-gradient-to-tr from-blue-100 to-white py-4 ">
- <div className="mb-8">
- <h2 class="flex flex-row items-center justify-center mb-4">
- <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none font-medium bg-blue-500 text-white">
+ <div className=" py-4 ">
+ <div className="mb-12">
+ <h2 class="flex flex-row items-center justify-center mb-2">
+ <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none">
  {slice.primary.heading}
  </span>
  </h2>

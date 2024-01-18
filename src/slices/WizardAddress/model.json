@@ -1,0 +1,63 @@
+{
+  "id": "wizard_address",
+  "type": "SharedSlice",
+  "name": "WizardAddress",
+  "description": "WizardAddress",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": { "label": "Heading", "placeholder": "" }
+        },
+        "sub_heading": {
+          "type": "Text",
+          "config": { "label": "Sub Heading", "placeholder": "" }
+        },
+        "text": {
+          "type": "Text",
+          "config": { "label": "Text", "placeholder": "" }
+        },
+        "image_2": {
+          "type": "Image",
+          "config": { "label": "Image 2", "constraint": {}, "thumbnails": [] }
+        },
+        "image_1": {
+          "type": "Image",
+          "config": { "label": "Image 1", "constraint": {}, "thumbnails": [] }
+        },
+        "address_1": {
+          "type": "Text",
+          "config": { "label": "Address 1", "placeholder": "" }
+        },
+        "address_2": {
+          "type": "Text",
+          "config": { "label": "Address 2", "placeholder": "" }
+        },
+        "link_1": {
+          "type": "Link",
+          "config": { "label": "Link 1", "placeholder": "", "select": null }
+        },
+        "link_2": {
+          "type": "Link",
+          "config": { "label": "Link 2", "placeholder": "", "select": null }
+        },
+        "link_1_label": {
+          "type": "Text",
+          "config": { "label": "Link 1 Label", "placeholder": "" }
+        },
+        "link_2_label": {
+          "type": "Text",
+          "config": { "label": "Link 2 Label", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

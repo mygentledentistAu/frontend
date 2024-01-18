@@ -14,12 +14,12 @@ const OurLocation = ({ slice }) => {
       data-slice-variation={slice.variation}
       >
      <div className="mb-8">
- <h2 class="flex flex-row items-center justify-center mb-4">
- <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none font-medium bg-blue-500 text-white">
+ <h2 class="flex flex-row items-center justify-center mb-2">
+ <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none">
  {slice.primary.main_heading}
  </span>
  </h2>
- <h2 className="text-center text-xl md:text-2xl">{slice.primary.sub_heading}</h2>
+ <h2 className="text-center text-xl">{slice.primary.sub_heading}</h2>
 </div>
       <div class="mb-12 px-12">
       <div
@@ -107,11 +107,11 @@ data-slice-variation={slice.variation}
 >
 <div className="mb-8">
  <h2 class="flex flex-row items-center justify-center mb-4">
- <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none font-medium bg-blue-500 text-white">
+ <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none">
  {slice.primary.main_heading}
  </span>
  </h2>
- <h2 className="text-center text-xl md:text-2xl">{slice.primary.sub_heading}</h2>
+ <h2 className="text-center text-xl">{slice.primary.sub_heading}</h2>
 </div>
 <div className="main_container w-full h-1/2 p-16">
   <div className="top_div flex flex-row items-center justify-between gap-12  mb-12 w-full">

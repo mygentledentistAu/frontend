@@ -51,21 +51,23 @@
 
 
   .gallery  > img {
-    width: 350px;
-    height: 450px;
-    /* margin: 5px; */
+    width: 450px;
+    height: 350px;
+    margin: 5px;
     object-fit:cover;
     display: block;
-    transition-duration: 1s;
+    transition-duration: 3s all ease;
     filter: grayscale(100%);
+    /* transform: scale(1.2); */
+
 }
 
-.gallery img:hover {
+/* .gallery img:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
     z-index: 100;
-}
+} */
 
 
 .gallery {

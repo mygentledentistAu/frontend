@@ -33,4 +33,5 @@ export const components = {
   text_with_image: dynamic(() => import("./TextWithImage")),
   treament_pricing: dynamic(() => import("./TreamentPricing")),
   treatment_list: dynamic(() => import("./TreatmentList")),
+  wizard_address: dynamic(() => import("./WizardAddress")),
 };

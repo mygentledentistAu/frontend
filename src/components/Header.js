@@ -56,11 +56,11 @@ export const Header = ({ navigation }) => {
                   </PrismicNextLink>
                 </li>
               ))}
-              {/* <li>
+              <li>
                 <a href="#" className="button button--small" data-open-dialog="#book-dialog">
                   Book Now
                 </a>
-              </li> */}
+              </li>
             </ul>
           </div>
         </nav>

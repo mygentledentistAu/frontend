@@ -15,11 +15,11 @@ const DoctorTeamCard = ({ slice }) => {
         >
           <div className=" mb-4 md:mb-8">
             <h2 class="flex flex-row items-center justify-center mb-4">
-              <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none font-medium bg-blue-500 text-white">
+              <span class="block mx-4 px-4 py-2.5 text-2xl md:text-4xl rounded leading-none">
                 {slice.primary.heading}
               </span>
             </h2>
-            <h3 className="text-center text-xl  md:px-12 ">{slice.primary.sub_heading}</h3>
+            <h3 className="text-center text-xl md:px-12 ">{slice.primary.sub_heading}</h3>
           </div>
           <div className=" flex justify-center items-center p-8">
             <div className="md:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 space-y-4 md:space-y-0">

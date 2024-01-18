@@ -21,7 +21,6 @@
 					[
 						"image",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
@@ -31,6 +30,110 @@
 							"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
 							"width": 4024,
 							"height": 4024,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "var1",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "folks",
+				"type": "Text"
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "free",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "FieldContent",
+				"value": "some",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+								"width": 2747,
+								"height": 4120
+							},
+							"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+							"width": 2747,
+							"height": 4120,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "var2",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "correct",
+				"type": "Text"
+			},
+			"sub_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "drive",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+								"width": 6597,
+								"height": 4398
+							},
+							"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+							"width": 6597,
+							"height": 4398,
 							"edit": {
 								"zoom": 1,
 								"crop": {

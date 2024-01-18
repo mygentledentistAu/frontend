@@ -671,7 +671,8 @@ type PageDocumentDataSlicesSlice =
   | CommonHeadingSectionSlice
   | TreamentPricingSlice
   | FaqsSlice
-  | CalltoActionSlice;
+  | CalltoActionSlice
+  | WizardAddressSlice;
 /**
  * Page document from Prismic
  *
@@ -2132,10 +2133,133 @@ export type HealthFundsCarouselSliceDefault = prismic.SharedSliceVariation<
   Simplify<HealthFundsCarouselSliceDefaultItem>
 >;
 /**
+ * Primary content in HealthFundsCarousel → Primary
+ *
+ */
+interface HealthFundsCarouselSliceVar1Primary {
+  /**
+   * Heading field in *HealthFundsCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *HealthFundsCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+  /**
+   * Text field in *HealthFundsCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismic.KeyTextField;
+}
+/**
+ * Item in HealthFundsCarousel → Items
+ *
+ */
+export interface HealthFundsCarouselSliceVar1Item {
+  /**
+   * Image field in *HealthFundsCarousel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.items[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * Var1 variation for HealthFundsCarousel Slice
+ *
+ * - **API ID**: `var1`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HealthFundsCarouselSliceVar1 = prismic.SharedSliceVariation<
+  "var1",
+  Simplify<HealthFundsCarouselSliceVar1Primary>,
+  Simplify<HealthFundsCarouselSliceVar1Item>
+>;
+/**
+ * Primary content in HealthFundsCarousel → Primary
+ *
+ */
+interface HealthFundsCarouselSliceVar2Primary {
+  /**
+   * Heading field in *HealthFundsCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *HealthFundsCarousel → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+}
+/**
+ * Item in HealthFundsCarousel → Items
+ *
+ */
+export interface HealthFundsCarouselSliceVar2Item {
+  /**
+   * Image field in *HealthFundsCarousel → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: health_funds_carousel.items[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismic.ImageField<never>;
+}
+/**
+ * var2 variation for HealthFundsCarousel Slice
+ *
+ * - **API ID**: `var2`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HealthFundsCarouselSliceVar2 = prismic.SharedSliceVariation<
+  "var2",
+  Simplify<HealthFundsCarouselSliceVar2Primary>,
+  Simplify<HealthFundsCarouselSliceVar2Item>
+>;
+/**
  * Slice variation for *HealthFundsCarousel*
  *
  */
-type HealthFundsCarouselSliceVariation = HealthFundsCarouselSliceDefault;
+type HealthFundsCarouselSliceVariation =
+  | HealthFundsCarouselSliceDefault
+  | HealthFundsCarouselSliceVar1
+  | HealthFundsCarouselSliceVar2;
 /**
  * HealthFundsCarousel Shared Slice
  *
@@ -4482,6 +4606,152 @@ export type TreatmentListSlice = prismic.SharedSlice<
   "treatment_list",
   TreatmentListSliceVariation
 >;
+/**
+ * Primary content in WizardAddress → Primary
+ *
+ */
+interface WizardAddressSliceDefaultPrimary {
+  /**
+   * Heading field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  heading: prismic.KeyTextField;
+  /**
+   * Sub Heading field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  sub_heading: prismic.KeyTextField;
+  /**
+   * Text field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  text: prismic.KeyTextField;
+  /**
+   * Image 2 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.image_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image_2: prismic.ImageField<never>;
+  /**
+   * Image 1 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.image_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image_1: prismic.ImageField<never>;
+  /**
+   * Address 1 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.address_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  address_1: prismic.KeyTextField;
+  /**
+   * Address 2 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.address_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  address_2: prismic.KeyTextField;
+  /**
+   * Link 1 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.link_1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link_1: prismic.LinkField;
+  /**
+   * Link 2 field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.link_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link_2: prismic.LinkField;
+  /**
+   * Link 1 Label field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.link_1_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_1_label: prismic.KeyTextField;
+  /**
+   * Link 2 Label field in *WizardAddress → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_address.primary.link_2_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_2_label: prismic.KeyTextField;
+}
+/**
+ * Default variation for WizardAddress Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type WizardAddressSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WizardAddressSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *WizardAddress*
+ *
+ */
+type WizardAddressSliceVariation = WizardAddressSliceDefault;
+/**
+ * WizardAddress Shared Slice
+ *
+ * - **API ID**: `wizard_address`
+ * - **Description**: `WizardAddress`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type WizardAddressSlice = prismic.SharedSlice<
+  "wizard_address",
+  WizardAddressSliceVariation
+>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -4572,6 +4842,12 @@ declare module "@prismicio/client" {
       HealthFundsCarouselSliceDefaultPrimary,
       HealthFundsCarouselSliceDefaultItem,
       HealthFundsCarouselSliceDefault,
+      HealthFundsCarouselSliceVar1Primary,
+      HealthFundsCarouselSliceVar1Item,
+      HealthFundsCarouselSliceVar1,
+      HealthFundsCarouselSliceVar2Primary,
+      HealthFundsCarouselSliceVar2Item,
+      HealthFundsCarouselSliceVar2,
       HealthFundsCarouselSliceVariation,
       HealthFundsCarouselSlice,
       HeroSliceDefaultPrimary,
@@ -4680,6 +4956,10 @@ declare module "@prismicio/client" {
       TreatmentListSliceDefault,
       TreatmentListSliceVariation,
       TreatmentListSlice,
+      WizardAddressSliceDefaultPrimary,
+      WizardAddressSliceDefault,
+      WizardAddressSliceVariation,
+      WizardAddressSlice,
     };
   }
 }

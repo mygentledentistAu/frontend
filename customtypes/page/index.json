@@ -50,7 +50,8 @@
             "common_heading_section": { "type": "SharedSlice" },
             "treament_pricing": { "type": "SharedSlice" },
             "faqs": { "type": "SharedSlice" },
-            "callto_action": { "type": "SharedSlice" }
+            "callto_action": { "type": "SharedSlice" },
+            "wizard_address": { "type": "SharedSlice" }
           }
         }
       }
