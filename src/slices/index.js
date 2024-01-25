@@ -22,6 +22,7 @@ export const components = {
   howto_assist_you: dynamic(() => import("./HowtoAssistYou")),
   image: dynamic(() => import("./Image")),
   image_cards: dynamic(() => import("./ImageCards")),
+  new_hero_video_section: dynamic(() => import("./NewHeroVideoSection")),
   new_treatment_list: dynamic(() => import("./NewTreatmentList")),
   our_location: dynamic(() => import("./OurLocation")),
   our_services: dynamic(() => import("./OurServices")),

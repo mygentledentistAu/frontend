@@ -42,6 +42,7 @@ export async function getStaticProps({ params, previewData }) {
   return {
     props: {
       page,
+      //wizardpage,
       context,
       navigation,
       settings,

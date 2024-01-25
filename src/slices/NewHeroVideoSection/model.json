@@ -1,0 +1,28 @@
+{
+  "id": "new_hero_video_section",
+  "type": "SharedSlice",
+  "name": "NewHeroVideoSection",
+  "description": "NewHeroVideoSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,strong"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import * as prismic from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+//import "../styles/header.css";
 
 import { useState, useEffect } from "react";
 
@@ -28,13 +29,13 @@ export const Header = ({ navigation }) => {
   }, []);
 
   return (
-    <header className={open ? "header--open" : ""}>
+    <header className={open ? "header--open" : ""} >
       <a href="#main-section" className="sr-only">
         Skip Navigation
       </a>
       <span className="page-mask" onClick={closePanel}></span>
-      <div className="grid-wrap">
-        <nav>
+      <div className="grid-wrap ">
+        <nav className="bg-blur w-full p-4">
           <Link href="/" className="logo">
             {navigation.data.homepageLabel}
           </Link>
