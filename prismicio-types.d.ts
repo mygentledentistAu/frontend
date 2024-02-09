@@ -613,6 +613,7 @@ export type NavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | WizardHeroSectionSlice
   | NewHeroVideoSectionSlice
   | NewTreatmentListSlice
   | AboutTeamSlice
@@ -2965,6 +2966,16 @@ export interface HowtoAssistYouSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   sub_heading: prismic.KeyTextField;
+
+  /**
+   * Image1 field in *HowtoAssistYou → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.primary.image1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image1: prismic.ImageField<never>;
 }
 
 /**
@@ -3079,11 +3090,85 @@ export type HowtoAssistYouSliceDiagonal = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *HowtoAssistYou → Primary*
+ */
+export interface HowtoAssistYouSliceVar2Primary {
+  /**
+   * Heading field in *HowtoAssistYou → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Sub Heading field in *HowtoAssistYou → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.primary.sub_heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_heading: prismic.KeyTextField;
+
+  /**
+   * Image field in *HowtoAssistYou → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *HowtoAssistYou → Items*
+ */
+export interface HowtoAssistYouSliceVar2Item {
+  /**
+   * Link field in *HowtoAssistYou → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Link Text field in *HowtoAssistYou → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: howto_assist_you.items[].link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+}
+
+/**
+ * var2 variation for HowtoAssistYou Slice
+ *
+ * - **API ID**: `var2`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HowtoAssistYouSliceVar2 = prismic.SharedSliceVariation<
+  "var2",
+  Simplify<HowtoAssistYouSliceVar2Primary>,
+  Simplify<HowtoAssistYouSliceVar2Item>
+>;
+
+/**
  * Slice variation for *HowtoAssistYou*
  */
 type HowtoAssistYouSliceVariation =
   | HowtoAssistYouSliceDefault
-  | HowtoAssistYouSliceDiagonal;
+  | HowtoAssistYouSliceDiagonal
+  | HowtoAssistYouSliceVar2;
 
 /**
  * HowtoAssistYou Shared Slice
@@ -4936,6 +5021,241 @@ export type WizardAddressSlice = prismic.SharedSlice<
   WizardAddressSliceVariation
 >;
 
+/**
+ * Primary content in *WizardHeroSection → Primary*
+ */
+export interface WizardHeroSectionSliceDefaultPrimary {
+  /**
+   * Image field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Title field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *WizardHeroSection → Items*
+ */
+export interface WizardHeroSectionSliceDefaultItem {
+  /**
+   * Title field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Content field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * Image field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Content2 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content2: prismic.KeyTextField;
+
+  /**
+   * Content3 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content3
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content3: prismic.KeyTextField;
+
+  /**
+   * Content4 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content4: prismic.KeyTextField;
+
+  /**
+   * Content5 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content5
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content5: prismic.KeyTextField;
+
+  /**
+   * Content6 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content6
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content6: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for WizardHeroSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WizardHeroSectionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WizardHeroSectionSliceDefaultPrimary>,
+  Simplify<WizardHeroSectionSliceDefaultItem>
+>;
+
+/**
+ * Primary content in *WizardHeroSection → Primary*
+ */
+export interface WizardHeroSectionSliceVariation2Primary {
+  /**
+   * Image field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Title field in *WizardHeroSection → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *WizardHeroSection → Items*
+ */
+export interface WizardHeroSectionSliceVariation2Item {
+  /**
+   * Title field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Content field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content: prismic.KeyTextField;
+
+  /**
+   * Img1 field in *WizardHeroSection → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wizard_hero_section.items[].img1
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  img1: prismic.ImageField<never>;
+}
+
+/**
+ * variation2 variation for WizardHeroSection Slice
+ *
+ * - **API ID**: `variation2`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WizardHeroSectionSliceVariation2 = prismic.SharedSliceVariation<
+  "variation2",
+  Simplify<WizardHeroSectionSliceVariation2Primary>,
+  Simplify<WizardHeroSectionSliceVariation2Item>
+>;
+
+/**
+ * Slice variation for *WizardHeroSection*
+ */
+type WizardHeroSectionSliceVariation =
+  | WizardHeroSectionSliceDefault
+  | WizardHeroSectionSliceVariation2;
+
+/**
+ * WizardHeroSection Shared Slice
+ *
+ * - **API ID**: `wizard_hero_section`
+ * - **Description**: WizardHeroSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WizardHeroSectionSlice = prismic.SharedSlice<
+  "wizard_hero_section",
+  WizardHeroSectionSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -5070,9 +5390,12 @@ declare module "@prismicio/client" {
       HowtoAssistYouSliceDefaultItem,
       HowtoAssistYouSliceDiagonalPrimary,
       HowtoAssistYouSliceDiagonalItem,
+      HowtoAssistYouSliceVar2Primary,
+      HowtoAssistYouSliceVar2Item,
       HowtoAssistYouSliceVariation,
       HowtoAssistYouSliceDefault,
       HowtoAssistYouSliceDiagonal,
+      HowtoAssistYouSliceVar2,
       ImageSlice,
       ImageSliceDefaultPrimary,
       ImageSliceWidePrimary,
@@ -5164,6 +5487,14 @@ declare module "@prismicio/client" {
       WizardAddressSliceDefaultPrimary,
       WizardAddressSliceVariation,
       WizardAddressSliceDefault,
+      WizardHeroSectionSlice,
+      WizardHeroSectionSliceDefaultPrimary,
+      WizardHeroSectionSliceDefaultItem,
+      WizardHeroSectionSliceVariation2Primary,
+      WizardHeroSectionSliceVariation2Item,
+      WizardHeroSectionSliceVariation,
+      WizardHeroSectionSliceDefault,
+      WizardHeroSectionSliceVariation2,
     };
   }
 }

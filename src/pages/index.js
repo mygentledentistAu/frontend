@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState } from 'react';
 import * as prismic from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import { PrismicText } from "@prismicio/react";
@@ -8,22 +9,52 @@ import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
 import { Article } from "@/components/Article";
+import { useRouter } from 'next/router';
+import Wizard from "./wizard";
 import { components } from "@/slices/";
 
 export default function Index({ page, context, navigation, settings, footer }) {
+  const [showWizard, setShowWizard] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    const hasVisitedWizard = localStorage.getItem('wizardVisited');
+    console.log('hasVisitedWizard:', hasVisitedWizard);
+
+    if (!hasVisitedWizard) {
+      localStorage.setItem('wizardVisited', 'true');
+      router.push('/wizard');
+    } else {
+      setShowWizard(false);
+    }
+  }, []);
+
+  //const router = useRouter();
+
+  // useEffect(() => {
+  //   // Check if the wizard has been visited, if not, redirect to the wizard page
+  //   const hasVisitedWizard = localStorage.getItem('wizardVisited');
+  //   if (!hasVisitedWizard) {
+  //     router.push('/wizard');
+  //   }
+  // }, []);
+
   return (
-    <Layout navigation={navigation} settings={settings} footer={footer}>
-      <Head>
-        <title>{prismic.asText(settings.data.name)}</title>
-      </Head>
+    <>
+      {console.log('showWizard:', showWizard)}
+      {showWizard && <Wizard setShowWizard={setShowWizard} />} {/* Conditionally render the Wizard component */}
+      <Layout navigation={navigation} settings={settings} footer={footer}>
+        <Head>
+          <title>{prismic.asText(settings.data.name)}</title>
+        </Head>
 
-      <SliceZone
-        slices={page.data.slices}
-        components={components}
-        context={context}
-      />
+        <SliceZone
+          slices={page.data.slices}
+          components={components}
+          context={context}
+        />
 
-      {/* <Bounded size="widest">
+        {/* <Bounded size="widest">
         <h2>Articles List</h2>
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (
@@ -46,7 +77,8 @@ export default function Index({ page, context, navigation, settings, footer }) {
           ))}
         </ul>
       </Bounded> */}
-    </Layout>
+      </Layout>
+    </>
   );
 }
 
@@ -65,7 +97,6 @@ export async function getStaticProps({ previewData }) {
   return {
     props: {
       page,
-      //wizardpage,
       context,
       navigation,
       settings,

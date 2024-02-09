@@ -37,4 +37,5 @@ export const components = {
   treament_pricing: dynamic(() => import("./TreamentPricing")),
   treatment_list: dynamic(() => import("./TreatmentList")),
   wizard_address: dynamic(() => import("./WizardAddress")),
+  wizard_hero_section: dynamic(() => import("./WizardHeroSection")),
 };

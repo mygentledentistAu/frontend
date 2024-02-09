@@ -7,13 +7,13 @@ import { components } from "@/slices";
 import { Layout } from "@/components/Layout";
 
 export default function Page({ page, context, navigation, settings, footer }) {
+
+  const shouldRenderHeaderAndFooter = page.uid !== 'location';
+
   return (
-    <Layout navigation={navigation} settings={settings} footer={footer}>
+    <>
       <Head>
-        <title>
-          {prismic.asText(page.data.title)} |{" "}
-          {prismic.asText(settings.data.name)}
-        </title>
+        <title>{prismic.asText(settings.data.name)}</title>
       </Head>
 
       <SliceZone
@@ -21,9 +21,42 @@ export default function Page({ page, context, navigation, settings, footer }) {
         components={components}
         context={context}
       />
-    </Layout>
+
+      {shouldRenderHeaderAndFooter && (
+        <Layout navigation={navigation} settings={settings} footer={footer}>
+          {/* Additional content you want to display within Layout */}
+          <Head>
+            <title>{prismic.asText(settings.data.name)}</title>
+          </Head>
+
+          <SliceZone
+            slices={page.data.slices}
+            components={components}
+            context={context}
+          />
+        </Layout>
+      )}
+    </>
   );
 }
+
+//   return (
+//     <Layout navigation={navigation} settings={settings} footer={footer}>
+//       <Head>
+//         <title>
+//           {prismic.asText(page.data.title)} |{" "}
+//           {prismic.asText(settings.data.name)}
+//         </title>
+//       </Head>
+
+//       <SliceZone
+//         slices={page.data.slices}
+//         components={components}
+//         context={context}
+//       />
+//     </Layout>
+//   );
+// }
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
@@ -42,7 +75,6 @@ export async function getStaticProps({ params, previewData }) {
   return {
     props: {
       page,
-      //wizardpage,
       context,
       navigation,
       settings,

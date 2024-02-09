@@ -24,6 +24,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "wizard_hero_section": { "type": "SharedSlice" },
             "new_hero_video_section": { "type": "SharedSlice" },
             "new_treatment_list": { "type": "SharedSlice" },
             "about_team": { "type": "SharedSlice" },
